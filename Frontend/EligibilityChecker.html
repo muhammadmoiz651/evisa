@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eligibility Checker</title>
+  <link rel="stylesheet" href="CSS/eligi1.css">
+  <link rel="stylesheet" href="CSS/eligi2.css">
+  <link rel="stylesheet" href="CSS/eligi3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap">
+  <link rel="icon" href="/Assests/pictures/site.png" type="image/x-icon" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+</head>
+
+<body>
+
+
+  <header>
+    <nav>
+      <div class="logo">
+        <a href="/home"><img src="/Assests/pictures/Study_e-visa-removebg-preview.png" alt="Logo"
+            class="logo-img" /></a>
+      </div>
+      <ul class="menu" id="menu">
+        <li><a href="/home" >Home</a></li>
+        <li><a href="/universityexplorer">University</a></li>
+        <li><a href="/scholarshipfinder">Scholarships</a></li>
+        <li><a href="/accommodationfinder">Accommodation</a></li>
+        <li><a href="/eligibilitychecker" class="active">Eligibility Checker</a></li>
+        <li><a href="/europasscv">Europass CV</a></li>
+        <li><a href="/visa">Visa Guide</a></li>
+        <li><a href="/testprepration">Test Prep</a></li>
+      </ul>
+      <div class="nav-buttons" id="navButtons">
+        <button id="loginBtn" class="login-btn" style="display: block;">Sign in</button>
+        <button id="createBtn" class="login-btn" style="display: block;">Sign up</button>
+        <button id="logoutBtn" class="login-btn" style="display: none;">logout</button>
+      </div>
+      <button class="hamburger" id="hamburger">☰</button>
+    </nav>
+  </header>
+  <div class="app-container">
+
+    <div class="app-header">
+      <h1>Certificate Eligibility Checker</h1>
+      <p class="tagline">
+        Upload your <strong>Intermediate</strong> or <strong>IELTS certificate</strong> to check your eligibility for
+        <span style="color: #5d1049; font-weight: 600;">Germany </span>, <span
+          style="color: #5d1049; font-weight: 600;">France </span>, and <span
+          style="color: #5d1049; font-weight: 600;">Spain</span> universities & scholarships.
+      </p>
+    </div>
+
+
+    <main>
+      <section class="upload-section" id="uploadSection">
+        <div class="upload-card">
+          <div class="upload-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="17 8 12 3 7 8"></polyline>
+              <line x1="12" y1="3" x2="12" y2="15"></line>
+            </svg>
+          </div>
+          <h2>Upload Certificate</h2>
+          <p>Upload your intermediate certificate or IELTS to check your eligibility</p>
+          <div class="file-input-container">
+            <input type="file" id="certificateInput" accept="image/*" class="file-input">
+            <label for="certificateInput" class="file-input-label">Choose File</label>
+          </div>
+          <p class="file-name" id="fileName">No file selected</p>
+        </div>
+      </section>
+
+      <section class="preview-section hidden" id="previewSection">
+        <div class="preview-card">
+          <h2>Certificate Preview</h2>
+          <div class="image-preview-container">
+            <img id="imagePreview" alt="Certificate preview">
+          </div>
+          <div class="preview-actions">
+            <button id="backButton" class="secondary-button">Back</button>
+            <button id="processButton" class="primary-button">Process Certificate</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="loading-section hidden" id="loadingSection">
+        <div class="loading-card">
+          <div class="spinner"></div>
+          <h2>Processing Certificate</h2>
+          <p>Using OCR to extract information...</p>
+        </div>
+      </section>
+
+      <section class="results-section hidden" id="resultsSection">
+        <div class="results-card">
+          <div class="success-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+              <polyline points="22 4 12 14.01 9 11.01"></polyline>
+            </svg>
+          </div>
+          <h2>Results</h2>
+          <div class="results-container">
+            <div class="result-item">
+              <h3>Board Name</h3>
+              <p id="boardName" class="result-value">-</p>
+            </div>
+            <div class="result-item">
+              <h3>Total Marks</h3>
+              <p id="totalMarks" class="result-value">-</p>
+            </div>
+            <div class="result-item">
+              <h3>Obtained Marks</h3>
+              <p id="obtainedMarks" class="result-value">-</p>
+            </div>
+            <div class="result-item">
+              <h3>Percentage</h3>
+              <p id="percentage" class="result-value">-</p>
+            </div>
+          </div>
+          <button id="newUploadButton" class="primary-button">Process Another Certificate</button>
+        </div>
+      </section>
+
+      <section class="error-section hidden" id="errorSection">
+        <div class="error-card">
+          <div class="error-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="12" y1="8" x2="12" y2="12"></line>
+              <line x1="12" y1="16" x2="12.01" y2="16"></line>
+            </svg>
+          </div>
+          <h2>Error</h2>
+          <p id="errorMessage">There was an error processing your certificate.</p>
+          <button id="tryAgainButton" class="primary-button">Try Again</button>
+        </div>
+      </section>
+    </main>
+
+
+  </div>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-section about-us">
+        <h3>About Us</h3>
+        <p>
+          We help students achieve their dreams of studying in Europe through
+          comprehensive visa and education guidance.
+        </p>
+      </div>
+
+      <div class="footer-section quick-links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Scholarships</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section connect">
+        <h3>Connect</h3>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-section newsletter">
+        <h3>Newsletter</h3>
+        <form>
+          <input type="email" placeholder="Enter your email" />
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <hr />
+      <p>&copy; 2025 EStudyVisa. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <div id="loginPopup" style="
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(26, 26, 26, 0.8); /* --dark with opacity */
+  backdrop-filter: blur(4px); /* Blur effect */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  font-family: 'Segoe UI', sans-serif;
+">
+    <div style="
+    background: #fff; /* --white */
+    padding: 50px 40px;
+    border-radius: 16px;
+    text-align: center;
+    max-width: 450px;
+    width: 90%;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.4s ease-in-out;
+  ">
+      <h2 style="
+    margin-bottom: 16px;
+    color: #5D1049; /* --primary */
+    font-size: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+">
+        <i class="fas fa-lock" style="margin-right: 8px; font-size: 30px; color: #5D1049;"></i>
+        Login Required
+      </h2>
+
+      <p style="
+      margin-bottom: 30px;
+      color: #666; /* --gray-text */
+      font-size: 16px;
+    ">You must login to access this feature. Please click the button below to sign in.</p>
+
+      <button id="popupLoginBtn" style="
+      padding: 12px 30px;
+      background-color: #5D1049; /* --primary */
+      color: #fff; /* --white */
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    ">Login</button>
+    </div>
+  </div>
+
+  <!-- Optional Fade Animation -->
+  <style>
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: scale(0.9);
+      }
+
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+  </style>
+
+
+  <script src="/JavaScript/eligiui.js"></script>
+  <script src="/JavaScript/eligiocr.js"></script>
+  <script src="/JavaScript/eligi1.js"></script>
+  <script src="/JavaScript/auth.js"></script>
+</body>
+
+</html>

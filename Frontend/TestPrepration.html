@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Test Preparation Portal</title>
+  <link rel="stylesheet" href="/CSS/TestPrepration.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <link rel="icon" href="/Assests/pictures/site.png" type="image/x-icon" />
+</head>
+
+<body>
+  <!-- Navigation Bar -->
+  <header>
+    <nav>
+      <div class="logo">
+        <a href="/home"><img src="/Assests/pictures/Study_e-visa-removebg-preview.png"
+            alt="Logo" class="logo-img" /></a>
+      </div>
+      <ul class="menu" id="menu">
+        <li><a href="/home" >Home</a></li>
+        <li><a href="/universityexplorer">University</a></li>
+        <li><a href="/scholarshipfinder" >Scholarships</a></li>
+        <li><a href="/accommodationfinder">Accommodation</a></li>
+        <li><a href="/eligibilitychecker" >Eligibility Checker</a></li>
+        <li><a href="/europasscv" >Europass CV</a></li>
+        <li><a href="/visa">Visa Guide</a></li>
+        <li><a href="/testprepration" class="active">Test Prep</a></li>
+      </ul>
+      <div class="nav-buttons" id="navButtons">
+      <button id="loginBtn" class="login-btn" style="display: block;">Sign in</button>
+      <button id="createBtn" class="login-btn" style="display: block;">Sign up</button>
+      <button id="logoutBtn" class="login-btn" style="display: none;">logout</button>
+      </div>
+      <button class="hamburger" id="hamburger">☰</button>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <h1>Prepare for Success: IELTS & TOEFL Test Resources</h1>
+      <p>
+        Access practice tests, study guides, and tips to help you ace your
+        exams.
+      </p>
+      <button class="cta-btn" onclick="scrollToResource()">
+        Start Preparing Now
+      </button>
+    </div>
+    <div class="hero-image">
+      <img src="/Assests/pictures/1731054425850.jfif" alt="Student studying" />
+    </div>
+  </section>
+
+  <!-- Test Preparation Resources -->
+  <section class="resources" id="services">
+    <div class="resource-column">
+      <h2>IELTS/TOEFL Preparation</h2>
+      <p>
+        Comprehensive study materials, mock tests, video tutorials, and more
+        to help you succeed in IELTS and TOEFL exams.
+      </p>
+      <div class="resource-items">
+        <div class="resource-item">
+          <i class="fas fa-clipboard-list"></i>
+          <h3>Mock Tests</h3>
+          <p>Interactive, timed mock tests with real-time results</p>
+        </div>
+        <div class="resource-item">
+          <i class="fas fa-book"></i>
+          <h3>Study Guides</h3>
+          <p>Downloadable PDFs with detailed breakdowns</p>
+        </div>
+        <div class="resource-item">
+          <i class="fas fa-video"></i>
+          <h3>Video Tutorials</h3>
+          <p>Video lessons covering test strategies</p>
+        </div>
+        <div class="resource-item">
+          <i class="fas fa-clock"></i>
+          <h3>Timed Practice</h3>
+          <p>Practice with official TOEFL-like tests</p>
+        </div>
+        <div class="resource-item">
+          <i class="fas fa-language"></i>
+          <h3>Vocabulary Builder</h3>
+          <p>Enhance vocabulary with interactive exercises</p>
+        </div>
+        <div class="resource-item">
+          <i class="fas fa-headphones"></i>
+          <h3>Audio Practice</h3>
+          <p>Listening comprehension practice</p>
+        </div>
+      </div>
+      <a href="/ielts"><button class="resource-btn">Access Preparation Resources</button></a>
+    </div>
+  </section>
+
+  <!-- Steps Section -->
+  <section class="steps">
+    <h2>How to Make the Most of Your Preparation</h2>
+    <div class="steps-container">
+      <div class="step">
+        <div class="step-number">1</div>
+        <h3>Choose Your Test</h3>
+        <p>Select IELTS or TOEFL based on requirements</p>
+      </div>
+      <div class="step">
+        <div class="step-number">2</div>
+        <h3>Access Practice Tests</h3>
+        <p>Begin with mock tests to assess yourself</p>
+      </div>
+      <div class="step">
+        <div class="step-number">3</div>
+        <h3>Study Materials</h3>
+        <p>Review guides and watch tutorials</p>
+      </div>
+      <div class="step">
+        <div class="step-number">4</div>
+        <h3>Track Progress</h3>
+        <p>Monitor your improvement regularly</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Success Stories -->
+  <!-- Testimonials -->
+  <section class="testimonials">
+    <h2>Student Success Stories</h2>
+    <div class="testimonials-container" id="testimonialsContainer">
+      <!-- 🔽 Static Testimonials -->
+      <div class="testimonial">
+        <div class="student-image">
+          <img src="/Assests/pictures/testomonial1.jpg" alt="Student" />
+        </div>
+        <p class="quote">
+          This platform helped me find the perfect scholarship for my master's program!
+        </p>
+        <div class="rating">⭐⭐⭐⭐⭐</div>
+        <p class="student-name">- Muhammad Ali</p>
+      </div>
+
+      <div class="testimonial">
+        <div class="student-image">
+          <img src="/Assests/pictures/testimonial2.jpg" alt="Student" />
+        </div>
+        <p class="quote">
+          "The visa guidance feature made my journey smooth and stress-free!"
+        </p>
+        <div class="rating">⭐⭐⭐⭐⭐</div>
+        <p class="student-name">- Rafique Ahmad</p>
+      </div>
+
+      <div class="testimonial">
+        <div class="student-image">
+          <img src="/Assests/pictures/testimonial3.jpg" alt="Student" />
+        </div>
+        <p class="quote">
+          "I successfully applied to my dream university thanks to this platform!"
+        </p>
+        <div class="rating">⭐⭐⭐⭐⭐</div>
+        <p class="student-name">- Zafar Khatak</p>
+      </div>
+
+      <!-- 🔼 New testimonials will be added here using JS -->
+    </div>
+
+    
+  </section>
+
+  <!-- Final CTA -->
+  <section class="final-cta">
+    <h2>Ready to Ace Your Test?</h2>
+    <a href="/ielts"><button class="cta-btn">Start Preparing Today</button></a>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-section about-us">
+        <h3>About Us</h3>
+        <p>
+          We help students achieve their dreams of studying in Europe through
+          comprehensive visa and education guidance.
+        </p>
+      </div>
+      <div class="footer-section quick-links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Scholarships</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section connect">
+        <h3>Connect</h3>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-section newsletter">
+        <h3>Newsletter</h3>
+        <form>
+          <input type="email" placeholder="Enter your email" />
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <hr />
+      <p>&copy; 2024 EduVisa. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <div id="loginPopup" style="
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(26, 26, 26, 0.8); /* --dark with opacity */
+  backdrop-filter: blur(4px); /* Blur effect */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  font-family: 'Segoe UI', sans-serif;
+">
+  <div style="
+    background: #fff; /* --white */
+    padding: 50px 40px;
+    border-radius: 16px;
+    text-align: center;
+    max-width: 450px;
+    width: 90%;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.4s ease-in-out;
+  ">
+    <h2 style="
+    margin-bottom: 16px;
+    color: #5D1049; /* --primary */
+    font-size: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+">
+    <i class="fas fa-lock" style="margin-right: 8px; font-size: 30px; color: #5D1049;"></i> 
+    Login Required
+</h2>
+
+    <p style="
+      margin-bottom: 30px;
+      color: #666; /* --gray-text */
+      font-size: 16px;
+    ">You must login to access this feature. Please click the button below to sign in.</p>
+
+    <button id="popupLoginBtn" style="
+      padding: 12px 30px;
+      background-color: #5D1049; /* --primary */
+      color: #fff; /* --white */
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    ">Login</button>
+  </div>
+</div>
+
+<!-- Optional Fade Animation -->
+<style>
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+</style>
+
+  <script src="/JavaScript/TestPrepration.js"></script>
+  <script src="/JavaScript/auth.js"></script>
+</body>
+
+</html>

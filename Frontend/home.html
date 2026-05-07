@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>E-Visa Guidance & Europass CV</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="/CSS/home.css" />
+  <link rel="stylesheet" href="/chatbot/chatbot.css" />
+  <link rel="stylesheet" href="/chatbot/styley.css" />
+  <link rel="icon" href="/Assests/pictures/site.png" type="image/x-icon" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" />
+
+</head>
+
+<body>
+  <!-- Navigation Bar -->
+   <header>
+    <nav>
+      <div class="logo">
+        <a href="/home"><img src="/Assests/pictures/Study_e-visa-removebg-preview.png"
+            alt="Logo" class="logo-img" /></a>
+      </div>
+      <ul class="menu" id="menu">
+        <li><a href="/home" class="active">Home</a></li>
+        <li><a href="/universityexplorer">University</a></li>
+        <li><a href="/scholarshipfinder">Scholarships</a></li>
+        <li><a href="/accommodationfinder">Accommodation</a></li>
+        <li><a href="/eligibilitychecker">Eligibility Checker</a></li>
+        <li><a href="/europasscv">Europass CV</a></li>
+        <li><a href="/visa">Visa Guide</a></li>
+        <li><a href="/testprepration">Test Prep</a></li>
+      </ul>
+      <div class="nav-buttons" id="navButtons">
+      <button id="loginBtn" class="login-btn" style="display: block;">Sign in</button>
+      <button id="createBtn" class="login-btn" style="display: block;">Sign up</button>
+      <button id="logoutBtn" class="login-btn" style="display: none;">logout</button>
+      </div>
+      <button class="hamburger" id="hamburger">☰</button>
+    </nav>
+  </header>
+   
+ 
+
+  <!-- Hero Section -->
+  <section class="homehero">
+    <div class="homehero-text">
+      <h1>Your Gateway to European Education & Visas</h1>
+      <p>
+        Find scholarships, apply for universities, and get visa guidance – All
+        in one place.
+      </p>
+      <button class="cta-btn" onclick="scrollToservices()">
+        Start Your Application
+      </button>
+    </div>
+    <div class="homehero-image">
+      <img src="/Assests/pictures/homehero.jpg" alt="Hero Image" />
+    </div>
+  </section>
+
+  <!-- Service Highlights -->
+  <section class="services-section " id="ourservices">
+    <h2 class="services-heading">Our Services</h2>
+  </section>
+  <section class="services ">
+    
+    <div class="service-card ">
+      
+      <i class="service-icon fa fa-university"></i>
+      <h3>University Info</h3>
+      <p>Find universities across Europe with direct application links.</p>
+      <a href="/universityexplorer"><button class="explore-btn">Explore</button></a>
+      
+    </div>
+
+    <div class="service-card ">
+      <i class="service-icon fa fa-graduation-cap"></i>
+      <h3>Scholarship Finder</h3>
+      <p>Search for scholarships by country, university, or program.</p>
+      <a href="/scholarshipfinder"><button class="explore-btn">Find Scholarships</button></a>
+    </div>
+    <div class="service-card ">
+      <i class="service-icon fa fa-check-circle"></i>
+      <h3>Eligibility Checker</h3>
+      <p>Check your eligibility for universities and scholarships.</p>
+      <a href="/eligibilitychecker"><button class="explore-btn">Check Eligibility</button></a>
+    </div>
+    <div class="service-card ">
+      <i class="service-icon fa fa-passport"></i>
+      <h3>Visa Guide</h3>
+      <p>Get detailed guidance on visa requirements for each country.</p>
+      <a href="/visa"><button class="explore-btn">Explore Visa Guide</button></a>
+    </div>
+    <div class="service-card ">
+      <i class="service-icon fa fa-pencil-alt"></i>
+      <h3>Test Preparation</h3>
+      <p>Prepare for IELTS and TOEFL with mock tests and resources.</p>
+      <a href="/testprepration"><button class="explore-btn">Start Preparing</button></a>
+    </div>
+    <div class="service-card ">
+      <i class="service-icon fa fa-file-alt"></i>
+      <h3>Europass CV Generator</h3>
+      <p>Create professional CVs in Europass format for free.</p>
+      <a href="/europasscv">
+        <button class="explore-btn">Create CV</button></a>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section class="how-it-works reveal">
+    <h2>How It Works</h2>
+    <div class="steps">
+      <div class="step">
+        <i class="fas fa-globe select-country-icon"></i>
+        <h6>Select a Country/University</h6>
+        <p>Browse through our curated list of top European universities</p>
+      </div>
+      <div class="step">
+        <i class="fas fa-check-circle eligibility-check-icon"></i>
+        <h6>Eligibility Checker</h6>
+        <p>Submit your academic documents for eligibility checking</p>
+      </div>
+      <div class="step">
+        <i class="fas fa-passport visa-guide-icon"></i>
+        <h6>Receive E-Visa Guidance</h6>
+        <p>Get personalied guidence for your visa application</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testimonials">
+    <h2>Student Success Stories</h2>
+    <div class="testimonials-container" id="testimonialsContainer">
+      <!-- 🔽 Static Testimonials -->
+      <div class="testimonial">
+        <div class="student-image">
+          <img src="/Assests/pictures/testomonial1.jpg" alt="Student" />
+        </div>
+        <p class="quote">
+          This platform helped me find the perfect scholarship for my master's program!
+        </p>
+        <div class="rating">⭐⭐⭐⭐⭐</div>
+        <p class="student-name">- Muhammad Ali</p>
+      </div>
+
+      <div class="testimonial">
+        <div class="student-image">
+          <img src="/Assests/pictures/testimonial2.jpg" alt="Student" />
+        </div>
+        <p class="quote">
+          "The visa guidance feature made my journey smooth and stress-free!"
+        </p>
+        <div class="rating">⭐⭐⭐⭐⭐</div>
+        <p class="student-name">- Rafique Ahmad</p>
+      </div>
+
+      <div class="testimonial">
+        <div class="student-image">
+          <img src="/Assests/pictures/testimonial3.jpg" alt="Student" />
+        </div>
+        <p class="quote">
+          "I successfully applied to my dream university thanks to this platform!"
+        </p>
+        <div class="rating">⭐⭐⭐⭐⭐</div>
+        <p class="student-name">- Zafar Khatak</p>
+      </div>
+
+      <!-- 🔼 New testimonials will be added here using JS -->
+    </div>
+
+    
+  </section>
+
+   <section class="testimonial-form-section">
+    <h2>Submit Your Testimonial</h2>
+    <form id="testimonialForm" enctype="multipart/form-data">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <textarea name="quote" placeholder="Your Testimonial" required></textarea>
+      <input type="number" name="rating" placeholder="Rating (1-5)" min="1" max="5" required />
+      <input type="file" name="image" accept="image/*" required />
+      <button type="submit">Submit Testimonial</button>
+    </form>
+    <div id="formMessage" style="display:none; color: green; margin-top: 10px; font-weight: bold;"></div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="cta">
+    <h2>Start Your Visa Journey Today!</h2>
+    <a href="Visa.html"><button class="cta-btn">Get Started</button></a>
+  </section>
+  
+  <!-- Add the chatbot container -->
+
+  <div id="chatbot">
+    <!-- Chat Icon Button -->
+    <button id="chat-toggle" class="chat-icon" aria-label="Open chat assistant">
+      <span class="material-symbols-rounded">support_agent</span>
+    </button>
+  
+    <!-- Chatbot Container (Initially Hidden) -->
+    <div id="chatbot-container" class="hidden">
+      <div class="chatbot-header">
+        <div class="chatbot-title">
+          <span class="material-symbols-rounded">school</span>
+          <h2>University Admissions Assistant</h2>
+        </div>
+        <button id="close-chat" aria-label="Close chat">
+          <span class="material-symbols-rounded">close</span>
+        </button>
+      </div>
+  
+      <div class="chat-messages" id="chat-messages">
+        <div class="message bot">
+          <div class="message-content">
+            <p>Hello! I'm your University Admissions Assistant. I can help with information about university admissions, scholarships, Accommodation and Visa guide  in:</p>
+            <ul>
+              <li><strong>France</strong></li>
+              <li><strong>Spain</strong></li>
+              <li><strong>Germany</strong></li>
+            </ul>
+            <p>What would you like to know about?</p>
+          </div>
+        </div>
+      </div>
+  
+      <div class="chat-input-area">
+        <input 
+          type="text" 
+          id="user-input" 
+          placeholder="Ask about admissions or scholarships..."
+          aria-label="Type your message"
+        >
+        <button id="send-message" aria-label="Send message">
+          <span class="material-symbols-rounded">send</span>
+        </button>
+      </div>
+    </div>
+  </div>
+  
+  
+
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-section about-us">
+        <h3>About Us</h3>
+        <p>
+          We help students achieve their dreams of studying in Europe through
+          comprehensive visa and education guidance.
+        </p>
+      </div>
+
+      <div class="footer-section quick-links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Scholarships</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section connect">
+        <h3>Connect</h3>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-section newsletter">
+        <h3>Newsletter</h3>
+        <form>
+          <input type="email" placeholder="Enter your email" />
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <hr />
+      <p>&copy; 2025 EStudyVisa. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="/JavaScript/home.js"></script>
+  <script src="/JavaScript/auth.js"></script>
+  <script src="/chatbot/main.js"></script>
+  <script src="/chatbot/chatbot.js"></script>
+  
+</body>
+
+</html>

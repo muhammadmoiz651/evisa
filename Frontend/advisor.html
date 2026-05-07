@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Advisor Chat</title>
+    <link rel="stylesheet" href="/CSS/chatstyle.css">
+    <link rel="stylesheet" href="/CSS/chat-styles.css">
+    <link rel="icon" href="/Assests/pictures/site.png" type="image/x-icon" />
+  </head>
+  <body>
+    <header>
+    <nav>
+      <div class="logo">
+        <a href="/home"><img src="/Assests/pictures/Study_e-visa-removebg-preview.png"
+            alt="Logo" class="logo-img" /></a>
+      </div>
+      <ul class="menu" id="menu">
+        
+      </ul>
+      <div class="nav-buttons" id="navButtons">
+      <button id="loginBtn" class="login-btn" style="display: block;">Sign in</button>
+      <button id="createBtn" class="login-btn" style="display: block;">Sign up</button>
+      <button id="logoutBtn" class="login-btn" style="display: none;">logout</button>
+      </div>
+      <button class="hamburger" id="hamburger">☰</button>
+    </nav>
+  </header>
+
+    <div class="chat-container advisor-theme">
+      <div class="chat-header">
+        
+        <div class="chat-info">
+          <div class="profile-pic user">
+            <span>U</span>
+          </div>
+          <div class="chat-details">
+            <h2>Users- Active in E-Visa Study Group Chat</h2>
+            
+          </div>
+        </div>
+        <div class="header-actions">
+         
+        </div>
+      </div>
+
+      <div class="chat-messages" id="chat-messages">
+        
+      </div>
+
+      <div class="chat-input">
+        <div class="input-container">
+          
+          <input type="text" id="advisor-message" placeholder="Type a response..." />
+          <button id="send-button" class="send-button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="22" y1="2" x2="11" y2="13"></line>
+              <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+            </svg>
+          </button>
+        </div>
+      </div>
+      
+    </div>
+
+    <script type="module" src="/JavaScript/advisorChat.js"></script>
+    <script type="module" src="/JavaScript/auth.js"></script>
+  </body>
+</html>

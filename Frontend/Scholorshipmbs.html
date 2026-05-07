@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UPF Talent Scholarship</title>
+  <link rel="stylesheet" href="/CSS/artsspaincholorship.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="icon" href="/Assests/pictures/site.png" type="image/x-icon" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="container">
+        <nav>
+            <div class="logo">
+              <a href="/home"><img src="/Assests/pictures/Study_e-visa-removebg-preview.png"
+                  alt="Logo" class="logo-img" /></a>
+            </div>
+            <ul class="menu">
+              <li><a href="/home" >Home</a></li>
+              <li><a href="/universityexplorer">University</a></li>
+              <li><a href="/scholarshipfinder" class="active">Scholarships</a></li>
+              <li><a href="/accommodationfinder">Accommodation</a></li>
+              <li>
+                <a href="/eligibilitychecker">Eligibility Checker</a>
+              </li>
+              <li><a href="/europasscv">Europass CV</a></li>
+              <li><a href="/visa">Visa Guide</a></li>
+              <li><a href="/testprepration">Test Prep</a></li>
+            </ul>
+            <button id="loginBtn" class="login-btn" style="display: block;">Login</button>
+            <button id="logoutBtn" class="login-btn" style="display: none;">logout</button>
+      
+          </nav>
+          <div class="header-content">
+            <h1 id="scholarship-title"></h1>
+            <p id="scholarship-subtitle" class="subtitle"></p>
+            <div class="deadline">
+              <span class="deadline-label">Application Deadline:</span>
+              <span id="deadline-date-timeline" class="deadline-date"></span>
+            </div>
+            <a href="https://mbs.braincapital.de/en/applicationform.html" target="_blank" id="apply-now" class="cta-button">Apply Now</a>
+          </div>
+    </div>
+  </header>
+
+  <section class="overview">
+  <div class="container">
+    <div class="scholarship-card">
+
+      <!-- Amount -->
+      <div class="card-item amount">
+        <div class="icon gold"><i class="fas fa-euro-sign"></i></div>
+        <h3>Based on Student's Individual Needs</h3>
+        <p>Tuition funding through income-based repayment</p>
+      </div>
+
+      <!-- Admission -->
+      <div class="card-item travel">
+        <div class="icon gold"><i class="fas fa-university"></i></div>
+        <h3>Available after Admission</h3>
+        <p>Only students admitted to MBS programs can apply</p>
+      </div>
+
+      <!-- Flexibility -->
+      <div class="card-item age">
+        <div class="icon gold"><i class="fas fa-user-clock"></i></div>
+        <h3>No Fixed Age Limit</h3>
+        <p>Eligibility based on profile and admission</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+  
+
+ <section id="eligibility" class="eligibility">
+  <div class="container">
+    <div class="section-header">
+      <h2>Eligibility Criteria</h2>
+      <div class="underline"></div>
+    </div>
+    <div class="eligibility-content">
+      <ul class="eligibility-list">
+        <li>
+          <span class="check-icon">✓</span>
+          <div>
+            <h3>International or EU Students</h3>
+            <p>Applicants can be from EU or non-EU countries</p>
+          </div>
+        </li>
+        <li> 
+          <span class="check-icon">✓</span>
+          <div>
+            <h3>Admission to Munich Business School</h3>
+            <p>Must hold an admission letter to a Bachelor's or Master's program at MBS</p>
+          </div>
+        </li>
+        <li>
+          <span class="check-icon">✓</span>
+          <div>
+            <h3>Good Academic Profile</h3>
+            <p>Applicants should demonstrate solid academic performance and potential</p>
+          </div>
+        </li>
+        <li>
+          <span class="check-icon">✓</span>
+          <div>
+            <h3>Financial Need</h3>
+            <p>Willingness to opt for income-based repayment model after graduation</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+  <section id="timeline" class="timeline">
+    <div class="container">
+      <div class="section-header">
+        <h2>Application Timeline</h2>
+        <div class="underline"></div>
+      </div>
+      <div class="timeline-container">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3>Application Open</h3>
+            <p>Submit University Admission Card</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3  >Application Deadline</h3>
+            <p id="deadline-date" class="deadline-date" ></p>
+          </div>
+        </div>
+        
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3>Scholarship Award</h3>
+            <p>After Aproval</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="details" class="details">
+  <div class="container">
+    <div class="section-header">
+      <h2>Scholarship Details</h2>
+      <div class="underline"></div>
+    </div>
+    <div class="accordion">
+
+      <div class="accordion-item">
+        <div class="accordion-header">
+          <h3>Application Procedure</h3>
+          <span class="accordion-icon">+</span>
+        </div>
+        <div class="accordion-content">
+          <p>To apply for the MBS Education Fund, students must complete the official online application form provided by Brain Capital.</p>
+          <p>Required documents include:</p>
+          <ul>
+            <li>Curriculum Vitae (CV)</li>
+            <li>Bachelor's degree transcripts</li>
+            <li>Admission confirmation from Munich Business School</li>
+            <li>Valid passport or identity card</li>
+          </ul>
+          <p>Once your application is reviewed and found suitable, you will be contacted for a personal interview to discuss the funding model.</p>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <div class="accordion-header">
+          <h3>Selection & Evaluation Criteria</h3>
+          <span class="accordion-icon">+</span>
+        </div>
+        <div class="accordion-content">
+          <p>Applicants are evaluated based on:</p>
+          <ul>
+            <li>Academic background and performance</li>
+            <li>Overall profile and motivation</li>
+            <li>Admission to Munich Business School (Bachelor or Master program)</li>
+          </ul>
+          <p>After a successful review, a funding model discussion is held to ensure transparency and mutual understanding.</p>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <div class="accordion-header">
+          <h3>Amount and Payment of the Scholarship</h3>
+          <span class="accordion-icon">+</span>
+        </div>
+        <div class="accordion-content">
+          <p>The MBS Education Fund covers 100% of your tuition fees upfront. The funding amount depends on each student’s individual financial need and program cost.</p>
+          <p>There is no fixed amount or monthly stipend. Instead, the fund provides a flexible financing model tailored to your situation.</p>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <div class="accordion-header">
+          <h3>Course Attendance and Academic Standing</h3>
+          <span class="accordion-icon">+</span>
+        </div>
+        <div class="accordion-content">
+          <p>Students funded by the MBS Education Fund must:</p>
+          <ul>
+            <li>Remain enrolled in their selected Bachelor's or Master's program at Munich Business School</li>
+            <li>Maintain satisfactory academic progress</li>
+            <li>Comply with all institutional regulations and academic requirements</li>
+          </ul>
+          <p>Failure to comply with academic or behavioral standards may impact your funding agreement.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+ <div class="chat-button">
+  <a href="/userr"><button>Chat with Experts</button></a>
+</div>
+  
+  
+  <section id="application" class="application">
+  <div class="container">
+    <div class="section-header">
+      <h2>How to Apply</h2>
+      <div class="underline"></div>
+    </div>
+
+    <div class="application-steps">
+
+      <div class="step-item">
+        <div class="step-number">1</div>
+        <div class="step-content">
+          <h3>Quick and Easy Application</h3>
+          <p>Complete the online form and attach the required documents:<br>
+            - CV<br>
+            - Bachelor transcripts<br>
+            - Admission confirmation from the university<br>
+            - Identity card or passport</p>
+        </div>
+      </div>
+
+      <div class="step-item">
+        <div class="step-number">2</div>
+        <div class="step-content">
+          <h3>Profile Check</h3>
+          <p>We’ll review your application to ensure you meet our funding criteria. Your academic background and overall profile are considered. If selected, we’ll invite you for a personal chat.</p>
+        </div>
+      </div>
+
+      <div class="step-item">
+        <div class="step-number">3</div>
+        <div class="step-content">
+          <h3>Funding Model Discussion</h3>
+          <p>We will explain our education fund model in detail through a phone or video call. You’ll get a chance to ask questions before deciding to proceed with the funding offer.</p>
+        </div>
+      </div>
+
+      <div class="step-item">
+        <div class="step-number">4</div>
+        <div class="step-content">
+          <h3>Start Your Journey</h3>
+          <p>Once you sign the contract, the education fund will cover your tuition. You can fully focus on your studies, and we’ll be there to support you if any financing questions arise.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="cta-container">
+      <a href="https://mbs.braincapital.de/en/applicationform.html" target="_blank" class="cta-button">
+        Start Application
+      </a>
+    </div>
+  </div>
+</section>
+
+  
+  
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-section about-us">
+        <h3>About Us</h3>
+        <p>
+          We help students achieve their dreams of studying in Europe through
+          comprehensive visa and education guidance.
+        </p>
+      </div>
+
+      <div class="footer-section quick-links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Scholarships</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section connect">
+        <h3>Connect</h3>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-section newsletter">
+        <h3>Newsletter</h3>
+        <form>
+          <input type="email" placeholder="Enter your email" />
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <hr />
+      <p>&copy; 2025 EStudyVisa. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <div id="loginPopup" style="
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(26, 26, 26, 0.8); /* --dark with opacity */
+  backdrop-filter: blur(4px); /* Blur effect */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  font-family: 'Segoe UI', sans-serif;
+">
+  <div style="
+    background: #fff; /* --white */
+    padding: 50px 40px;
+    border-radius: 16px;
+    text-align: center;
+    max-width: 450px;
+    width: 90%;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.4s ease-in-out;
+  ">
+    <h2 style="
+    margin-bottom: 16px;
+    color: #5D1049; /* --primary */
+    font-size: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+">
+    <i class="fas fa-lock" style="margin-right: 8px; font-size: 30px; color: #5D1049;"></i> 
+    Login Required
+</h2>
+
+    <p style="
+      margin-bottom: 30px;
+      color: #666; /* --gray-text */
+      font-size: 16px;
+    ">You must login to access this feature. Please click the button below to sign in.</p>
+
+    <button id="popupLoginBtn" style="
+      padding: 12px 30px;
+      background-color: #5D1049; /* --primary */
+      color: #fff; /* --white */
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    ">Login</button>
+  </div>
+</div>
+
+<!-- Optional Fade Animation -->
+<style>
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+</style>
+
+
+
+  <script src="/JavaScript/Scholorshipmbs.js"></script>
+  <script src="/JavaScript/auth.js"></script>
+</body>
+</html>

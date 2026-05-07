@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>European Student Visa Guide</title>
+  <link rel="stylesheet" href="/CSS/Visa.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <link rel="icon" href="/Assests/pictures/site.png" type="image/x-icon" />
+</head>
+
+<body>
+  <!-- Navigation Bar -->
+  <header>
+    <nav>
+      <div class="logo">
+        <a href="/home"><img src="/Assests/pictures/Study_e-visa-removebg-preview.png"
+            alt="Logo" class="logo-img" /></a>
+      </div>
+      <ul class="menu" id="menu">
+        <li><a href="/home" >Home</a></li>
+        <li><a href="/universityexplorer">University</a></li>
+        <li><a href="/scholarshipfinder" >Scholarships</a></li>
+        <li><a href="/accommodationfinder">Accommodation</a></li>
+        <li><a href="/eligibilitychecker" >Eligibility Checker</a></li>
+        <li><a href="/europasscv" >Europass CV</a></li>
+        <li><a href="/visa " class="active">Visa Guide</a></li>
+        <li><a href="/testprepration">Test Prep</a></li>
+      </ul>
+      <div class="nav-buttons" id="navButtons">
+      <button id="loginBtn" class="login-btn" style="display: block;">Sign in</button>
+      <button id="createBtn" class="login-btn" style="display: block;">Sign up</button>
+      <button id="logoutBtn" class="login-btn" style="display: none;">logout</button>
+      </div>
+      <button class="hamburger" id="hamburger">☰</button>
+    </nav>
+  </header>
+
+   <div class="chat-button">
+  <a href="/userr"><button>Chat with Experts</button></a>
+</div>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <h1>European Student Visa Guide</h1>
+      <p>
+        Start your educational journey in Europe. Get detailed information
+        about student visas for France, Spain, and Germany, and apply directly
+        through official channels.
+      </p>
+      <a href="#countries" class="primary-cta">View Countries</a>
+    </div>
+    <div class="hero-image">
+      <img src="/Assests/pictures/visa.webp" alt="" srcset="">
+    </div>
+  </section>
+
+  <!-- Countries Section -->
+  <section class="countries" id="countries">
+    <h2 style="margin-top: 70px;">Choose Your Destination</h2>
+    <div class="countries-grid" id="countries-grid"></div>
+  </section>
+  
+  <section id="visa-info" class="visa-info">
+    <div class="container">
+      <div class="section-header" style="margin-top: 70px;">
+        <h2>Required Documents</h2>
+        <p>Essential documents needed for student visa applications</p>
+      </div>
+
+      <!-- JS will inject cards here -->
+      <div class="requirements-grid"></div>
+    </div>
+  </section>
+
+  <!-- ============ Visa Appointment ============ -->
+  <section id="appointment" class="appointment">
+    <div class="container">
+      <div class="section-header">
+        <h2>Book Your Appointment</h2>
+        <p>Schedule a consultation with our visa experts</p>
+      </div>
+
+      <!-- JS will inject cards here -->
+      <div class="appointment-grid"></div>
+    </div>
+  </section>
+
+  <!-- ============ Video Tutorials ============ -->
+  <section class="videos">
+    <h2 style="margin-top: 70px;">Video Tutorials</h2>
+    <div class="videos-container" id="videosContainer"></div>
+  </section>
+
+
+  <!-- Steps Section -->
+  <section class="steps">
+    <h2>Steps for a Successful Visa Application</h2>
+    <div class="steps-container">
+      <div class="step">
+        <i class="fas fa-globe"></i>
+        <h3>Step 1</h3>
+        <h4>Choose Your Country</h4>
+        <p>Select your desired study destination from our list of countries.</p>
+      </div>
+      <div class="step">
+        <i class="fas fa-university"></i>
+        <h3>Step 2</h3>
+        <h4>University Acceptance</h4>
+        <p>Get your acceptance letter from your chosen university.</p>
+      </div>
+      <div class="step">
+        <i class="fas fa-file-alt"></i>
+        <h3>Step 3</h3>
+        <h4>Prepare Documents</h4>
+        <p>Gather all required documents using our checklist below.</p>
+      </div>
+      <div class="step">
+        <i class="fas fa-money-check-alt"></i>
+        <h3>Step 4</h3>
+        <h4>Financial Proof</h4>
+        <p>Prepare proof of sufficient funds for your stay.</p>
+      </div>
+      <div class="step">
+        <i class="fas fa-edit"></i>
+        <h3>Step 5</h3>
+        <h4>Submit Application</h4>
+        <p>Apply through the official visa application portal.</p>
+      </div>
+      <div class="step">
+        <i class="fas fa-check-circle"></i>
+        <h3>Step 6</h3>
+        <h4>Visa Interview</h4>
+        <p>Attend your visa interview with confidence.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Documents Section -->
+  <section class="documents">
+    <h2>Document Checklist</h2>
+    <div class="documents-container">
+      <div class="document">
+        <input type="checkbox" id="doc1">
+        <label for="doc1">
+          <i class="fas fa-passport"></i>
+          <h4>Valid Passport</h4>
+          <p>Must be valid for at least 6 months beyond your stay</p>
+        </label>
+      </div>
+      <div class="document">
+        <input type="checkbox" id="doc2">
+        <label for="doc2">
+          <i class="fas fa-envelope-open-text"></i>
+          <h4>Acceptance Letter</h4>
+          <p>Official acceptance letter from your university</p>
+        </label>
+      </div>
+      <div class="document">
+        <input type="checkbox" id="doc3">
+        <label for="doc3">
+          <i class="fas fa-money-check-alt"></i>
+          <h4>Financial Documents</h4>
+          <p>Bank statements and sponsorship letters if applicable</p>
+        </label>
+      </div>
+      <div class="document">
+        <input type="checkbox" id="doc4">
+        <label for="doc4">
+          <i class="fas fa-file-medical"></i>
+          <h4>Health Insurance</h4>
+          <p>Proof of health insurance coverage</p>
+        </label>
+      </div>
+      <div class="document">
+        <input type="checkbox" id="doc5">
+        <label for="doc5">
+          <i class="fas fa-language"></i>
+          <h4>Language Proficiency</h4>
+          <p>IELTS/TOEFL score report</p>
+        </label>
+      </div>
+      <div class="document">
+        <input type="checkbox" id="doc6">
+        <label for="doc6">
+          <i class="fas fa-home"></i>
+          <h4>Accommodation Proof</h4>
+          <p>Housing arrangement documentation</p>
+        </label>
+      </div>
+    </div>
+    <div class="progress-bar">
+      <div class="progress"></div>
+      <span class="progress-text">0% Complete</span>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="faq">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-container">
+      <div class="faq-item">
+        <div class="faq-question">
+          <h4>How long does the visa process take?</h4>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          <p>Processing times vary by country: USA (2-4 weeks), UK (3 weeks), Canada (4-8 weeks), Australia (4-6 weeks),
+            Germany (4-6 weeks), France (2-3 weeks).</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">
+          <h4>What are the language requirements?</h4>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          <p>Most countries require IELTS (6.0-6.5) or TOEFL (80-90). Germany may require TestDaF, and France may
+            require DELF B2.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">
+          <h4>Can I work while studying?</h4>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          <p>Work hours vary by country: USA (20hrs/week on-campus), UK (20hrs/week), Canada (20hrs/week), Australia
+            (40hrs/fortnight), Germany (120 full/240 half days/year).</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-section about-us">
+        <h3>About Us</h3>
+        <p>
+          We help students achieve their dreams of studying in Europe through
+          comprehensive visa and education guidance.
+        </p>
+      </div>
+
+      <div class="footer-section quick-links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Scholarships</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section connect">
+        <h3>Connect</h3>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-section newsletter">
+        <h3>Newsletter</h3>
+        <form>
+          <input type="email" placeholder="Enter your email" />
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <hr />
+      <p>&copy; 2024 EduVisa. All rights reserved.</p>
+    </div>
+  </footer>
+  <script src="/JavaScript/Visa.js"></script>
+  <script src="/JavaScript/auth.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mock Test System</title>
+    <link rel="stylesheet" href="/CSS/MockTest.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <link rel="icon" href="/Assests/pictures/site.png" type="image/x-icon" />
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <header>
+    <nav>
+      <div class="logo">
+        <a href="/home"><img src="/Assests/pictures/Study_e-visa-removebg-preview.png"
+            alt="Logo" class="logo-img" /></a>
+      </div>
+      <ul class="menu" id="menu">
+        <li><a href="/home" >Home</a></li>
+        <li><a href="/universityexplorer">University</a></li>
+        <li><a href="/scholarshipfinder" >Scholarships</a></li>
+        <li><a href="/accommodationfinder">Accommodation</a></li>
+        <li><a href="/eligibilitychecker" >Eligibility Checker</a></li>
+        <li><a href="/europasscv" >Europass CV</a></li>
+        <li><a href="/visa">Visa Guide</a></li>
+        <li><a href="/testprepration" class="active">Test Prep</a></li>
+      </ul>
+      <div class="nav-buttons" id="navButtons">
+      <button id="loginBtn" class="login-btn" style="display: block;">Sign in</button>
+      <button id="createBtn" class="login-btn" style="display: block;">Sign up</button>
+      <button id="logoutBtn" class="login-btn" style="display: none;">logout</button>
+      </div>
+      <button class="hamburger" id="hamburger">☰</button>
+    </nav>
+  </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Test Info Section -->
+        <section id="test-info" class="active-section">
+            <h1>Start Your Mock Test</h1>
+            <p>You are about to take the IELTS Mock Test.</p>
+            <p>Please ensure you are in a quiet environment. The test is timed.</p>
+            <div id="main-timer">60:00</div>
+            <button id="start-test">Start Test</button>
+        </section>
+
+        <!-- Test Sections -->
+        <section id="test-sections" class="hidden">
+            <!-- Question Numbers Sidebar -->
+            <div class="question-numbers">
+                <h3>Questions</h3>
+                <div class="number-grid"></div>
+            </div>
+
+            <!-- Main Test Content -->
+            <div class="test-content">
+                <div class="section-nav">
+                    <button class="section-btn active" data-section="reading">
+                        Reading
+                    </button>
+                    <button class="section-btn" data-section="listening">
+                        Listening
+                    </button>
+                    <button class="section-btn" data-section="writing">Writing</button>
+                    <button class="section-btn" data-section="speaking">
+                        Speaking
+                    </button>
+                </div>
+
+                <!-- Reading Section -->
+                <div id="reading-section" class="test-section active">
+                    <h2>Reading Section</h2>
+                    <div class="question-area">
+                        <div id="reading-content"></div>
+                        <div id="reading-questions"></div>
+                    </div>
+                </div>
+
+                <!-- Listening Section -->
+                <div id="listening-section" class="test-section hidden">
+                    <h2>Listening Section</h2>
+                    <div class="audio-player">
+                        <audio id="listening-audio" controls autoplay>
+                            
+                        </audio>
+                    </div>
+                    <div id="listening-questions"></div>
+                </div>
+                
+                
+                
+
+                <!-- Writing Section -->
+                <div id="writing-section" class="test-section hidden">
+                    <h2>Writing Section</h2>
+                    <div class="writing-prompt"></div>
+                    <textarea id="writing-answer" placeholder="Start writing here..."></textarea>
+                    <div id="word-count">Words: 0/250</div>
+                </div>
+
+                <!-- Speaking Section -->
+                <div id="speaking-section" class="test-section hidden">
+                    <h2>Speaking Section</h2>
+                    <div class="speaking-prompt"></div>
+                    <div class="recording-controls">
+                        <button id="start-recording">Start Recording</button>
+                        <button id="stop-recording" disabled>Stop Recording</button>
+                        <audio id="recording-playback" controls class="hidden"></audio>
+                    </div>
+                    
+                    <div id="recording-status"></div>
+                </div>
+                
+
+                <!-- Navigation Controls -->
+                <div class="test-navigation">
+                    <button id="prev-question">Previous</button>
+                    <button id="next-question">Next</button>
+                    <button id="submit-test" class="hidden">Submit Test</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Results Section -->
+        <section id="results-section" class="hidden">
+            <h2>Your Test Results</h2>
+            <div class="scores">
+                <div class="score-item">
+                    Reading <span id="reading-score">0/10</span>
+                </div>
+                <div class="score-item">
+                    Listening <span id="listening-score">0/10</span>
+                </div>
+                <div class="score-item">
+                    Writing <span id="writing-score">0/10</span>
+                </div>
+                <div class="score-item">
+                    Speaking <span id="speaking-score">0/10</span>
+                </div>
+            </div>
+            <div class="feedback"></div>
+            <a href="/mocktest"><button class="retaketest">Retake Test</button></a>
+        </section>
+    </main>
+
+
+    <!-- footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section about-us">
+                <h3>About Us</h3>
+                <p>
+                    We help students achieve their dreams of studying in Europe through
+                    comprehensive visa and education guidance.
+                </p>
+            </div>
+
+            <div class="footer-section quick-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Scholarships</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section connect">
+                <h3>Connect</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-section newsletter">
+                <h3>Newsletter</h3>
+                <form>
+                    <input type="email" placeholder="Enter your email" />
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <hr />
+            <p>&copy; 2024 EduVisa. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <div id="loginPopup" style="
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(26, 26, 26, 0.8); /* --dark with opacity */
+    backdrop-filter: blur(4px); /* Blur effect */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    font-family: 'Segoe UI', sans-serif;
+  ">
+    <div style="
+      background: #fff; /* --white */
+      padding: 50px 40px;
+      border-radius: 16px;
+      text-align: center;
+      max-width: 450px;
+      width: 90%;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      animation: fadeIn 0.4s ease-in-out;
+    ">
+      <h2 style="
+      margin-bottom: 16px;
+      color: #5D1049; /* --primary */
+      font-size: 26px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  ">
+      <i class="fas fa-lock" style="margin-right: 8px; font-size: 30px; color: #5D1049;"></i> 
+      Login Required
+  </h2>
+  
+      <p style="
+        margin-bottom: 30px;
+        color: #666; /* --gray-text */
+        font-size: 16px;
+      ">You must login to access this feature. Please click the button below to sign in.</p>
+  
+      <button id="popupLoginBtn" style="
+        padding: 12px 30px;
+        background-color: #5D1049; /* --primary */
+        color: #fff; /* --white */
+        font-size: 16px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      ">Login</button>
+    </div>
+  </div>
+  
+  <!-- Optional Fade Animation -->
+  <style>
+  @keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+  }
+  </style>
+
+    <script src="/JavaScript/MockTest.js"></script>
+    <script src="/JavaScript/auth.js"></script>
+</body>
+
+</html>

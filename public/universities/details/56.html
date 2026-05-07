@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>university of lahore</title>
+  <link rel="stylesheet" href="/CSS/Universitydetail.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" />
+  <link rel="icon" href="/Assests/pictures/site.png" type="image/x-icon" />
+</head>
+
+<body>
+  <!-- Navigation Bar -->
+  <header>
+    <nav>
+      <div class="logo">
+        <a href="/home"><img src="/Assests/pictures/Study_e-visa-removebg-preview.png" alt="Logo"
+            class="logo-img" /></a>
+      </div>
+      <ul class="menu">
+        <li><a href="/home">Home</a></li>
+        <li><a href="/universityexplorer" class="active">University</a></li>
+        <li><a href="/scholarshipfinder">Scholarships</a></li>
+        <li><a href="/accommodationfinder">Accommodation</a></li>
+        <li><a href="/eligibilitychecker">Eligibility Checker</a></li>
+        <li><a href="/europasscv">Europass CV</a></li>
+        <li><a href="/visa">Visa Guide</a></li>
+        <li><a href="/testprepration">Test Prep</a></li>
+      </ul>
+      <button id="loginBtn" class="login-btn" style="display: block;">Login</button>
+      <button id="logoutBtn" class="login-btn" style="display: none;">Logout</button>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-left">
+        <div class="university-logo" id="universityLogo">
+          <!-- Optional: Insert logo image dynamically -->
+          <img src="/uploads/universities/uni_1747878706317.jpg" alt="university of lahore Logo" />
+        </div>
+        <h1 id="universityName">university of lahore</h1>
+        <p class="location" id="location">france</p>
+        <p class="description" id="universityDescription">sadasdas</p>
+        
+      </div>
+      <div class="hero-right" id="appbtn">
+        <!-- "Apply Now" button in Hero Section -->
+        <div class="button-row">
+          <button class="apply-now" id="applyUndergraduateBtn" onclick="window.open('https://gargantua.polytechnique.fr/siatel-web/app/linkto/mICYYYSgETY6?aw=1', '_blank')">Apply Now</button>
+        </div>
+        <div class="button-row">
+          <button class="bookmark" id="bookmarkBtn">
+            <span class="heart-icon">♡</span>
+          </button>
+          <button class="share" onclick="shareUniversity()">
+            <i class="fa fa-share-alt"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <div class="left-section">
+      <div class="card">
+        <h2>About the University</h2>
+        <p id="aboutDescription">sadasdas</p>
+        <div class="stats-grid" id="statsGrid">
+          <p><strong>World Ranking:</strong> 23</p>
+          
+          <!-- Add more stats if needed -->
+        </div><br>
+        
+      </div>
+
+      <!-- Programs Section -->
+      <div class="card">
+        <h2>
+          Programs Offered
+          
+        </h2>
+        <div id="programsSection" class="accordion">
+          <!-- Program list here -->
+          bacholor
+            
+        </div>
+      </div>
+    </div>
+
+    <div class="right-section">
+      <!-- Deadlines -->
+      <div class="sidebar-card">
+        <h3>Upcoming Deadlines</h3>
+        <div id="deadlinesSection" class="deadline-list">
+          19 novemeber
+            
+        </div>
+      </div>
+      <!-- Scholarships -->
+      <div class="sidebar-card">
+        <h3>Study Scholarships - Master Studies for All Academic Disciplines (DAAD)</h3>
+
+        <strong style="color: #5d1049">International Students Scholarship</strong>
+        <p><strong style="color: #5d1049">Amount:</strong>
+          - Covers monthly stipend, travel allowance, and insurance (Exact amount depends on DAAD guidelines)
+        </p>
+        <p><strong style="color: #5d1049">Benefits:</strong></p>
+        <ul>
+          <li>Monthly stipend from DAAD</li>
+          <li>Travel allowance (international)</li>
+          <li>Health, accident, and personal liability insurance</li>
+        </ul>
+        <p><strong style="color: #5d1049">Eligibility:</strong></p>
+        <ul>
+          <li>Must be applying for a Master’s degree program</li>
+          <li>Excellent academic record</li>
+          <li>Open to all nationalities (depending on country guidelines)</li>
+        </ul>
+
+        <button onclick="window.open('{{http://localhost:3000/daad}}')">
+          More Info
+        </button>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="sidebar-card">
+        <h3>Quick Links</h3>
+        <div class="quick-links">
+          <a href="{{page}}" class="quick-link">
+            <span class="icon">🏠</span>
+            <span>Housing</span>
+          </a>
+          <a href="/germanyvisa" class="quick-link">
+            <span class="icon">🛂</span>
+            <span>Visa Guide</span>
+          </a>
+          <a href="/testprepration" class="quick-link">
+            <span class="icon">📚</span>
+            <span>Test Preparation</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-section about-us">
+        <h3>About Us</h3>
+        <p>
+          We help students achieve their dreams of studying in Europe through comprehensive visa and education guidance.
+        </p>
+      </div>
+
+      <div class="footer-section quick-links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Scholarships</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section connect">
+        <h3>Connect</h3>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-section newsletter">
+        <h3>Newsletter</h3>
+        <form>
+          <input type="email" placeholder="Enter your email" />
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <hr />
+      <p>&copy; 2024 EduVisa. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Optional share function
+    function shareUniversity() {
+      if (navigator.share) {
+        navigator.share({
+          title: '{{universityName}}',
+          text: 'Check out this university!',
+          url: window.location.href,
+        }).catch(console.error);
+      } else {
+        alert('Sharing not supported on this browser.');
+      }
+    }
+  </script>
+  
+  <script src="/JavaScript/auth.js"></script>
+</body>
+
+</html>

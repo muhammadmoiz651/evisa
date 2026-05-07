@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DAAD Scholarship</title>
+  <link rel="stylesheet" href="/CSS/artsspaincholorship.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="icon" href="/Assests/pictures/site.png" type="image/x-icon" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="container">
+        <nav>
+            <div class="logo">
+              <a href="/home"><img src="/Assests/pictures/Study_e-visa-removebg-preview.png"
+                  alt="Logo" class="logo-img" /></a>
+            </div>
+            <ul class="menu">
+              <li><a href="/home" >Home</a></li>
+              <li><a href="/universityexplorer">University</a></li>
+              <li><a href="/scholarshipfinder" class="active">Scholarships</a></li>
+              <li><a href="/accommodationfinder">Accommodation</a></li>
+              <li>
+                <a href="/eligibilitychecker">Eligibility Checker</a>
+              </li>
+              <li><a href="/europasscv">Europass CV</a></li>
+              <li><a href="/visa">Visa Guide</a></li>
+              <li><a href="/testprepration">Test Prep</a></li>
+            </ul>
+            <button id="loginBtn" class="login-btn" style="display: block;">Login</button>
+            <button id="logoutBtn" class="login-btn" style="display: none;">logout</button>
+      
+          </nav>
+          <div class="header-content">
+            <h1 id="scholarship-title"></h1>
+            <p id="scholarship-subtitle" class="subtitle"></p>
+            <div class="deadline">
+              <span class="deadline-label">Application Deadline:</span>
+              <span id="deadline-date-timeline" class="deadline-date"></span>
+            </div>
+            <a href="" id="apply-now" class="cta-button">Apply Now</a>
+          </div>
+    </div>
+  </header>
+
+  <section class="overview">
+    <div class="container">
+      <div class="scholarship-card">
+  
+        <!-- Amount -->
+        <div class="card-item amount">
+          <div class="icon gold"><i class="fas fa-euro-sign"></i></div>
+          <h3 id="scholarship-amount"></h3>
+        </div>
+  
+        <!-- Travel -->
+        <div class="card-item travel">
+          <div class="icon gold"><i class="fas fa-plane-departure"></i></div>
+          <h3>Travelling</h3>
+          <p>Cover Travelling allowance</p>
+        </div>
+  
+        <!-- Age -->
+        <div class="card-item age">
+          <div class="icon gold"><i class="fas fa-user-graduate"></i></div>
+          <h3>≤ 30 Years</h3>
+          <p>Age Requirement</p>
+        </div>
+  
+      </div>
+    </div>
+  </section>
+  
+
+  <section id="eligibility" class="eligibility">
+  <div class="container">
+    <div class="section-header">
+      <h2>Eligibility Criteria</h2>
+      <div class="underline"></div>
+    </div>
+    <div class="eligibility-content">
+      <ul class="eligibility-list">
+        <li>
+          <span class="check-icon">✓</span>
+          <div>
+            <h3>International Applicants</h3>
+            <p>Open to graduates from all countries (outside Germany)</p>
+          </div>
+        </li>
+        <li>
+          <span class="check-icon">✓</span>
+          <div>
+            <h3>Completed Bachelor's Degree</h3>
+            <p>Must hold a completed undergraduate degree (at the time of application)</p>
+          </div>
+        </li>
+        <li> 
+          <span class="check-icon">✓</span>
+          <div>
+            <h3>Academic Excellence</h3>
+            <p>Strong academic record is essential (above-average GPA preferred)</p>
+          </div>
+        </li>
+        <li>
+          <span class="check-icon">✓</span>
+          <div>
+            <h3>Relevant Field of Study</h3>
+            <p>Proposed Master's degree must align with prior academic background</p>
+          </div>
+        </li>
+        <li>
+          <span class="check-icon">✓</span>
+          <div>
+            <h3>Language Proficiency</h3>
+            <p>Proof of English or German proficiency (IELTS, TOEFL, or TestDaF)</p>
+          </div>
+        </li>
+        <li>
+          <span class="check-icon">✓</span>
+          <div>
+            <h3>Motivation and Recommendation</h3>
+            <p>Strong motivation letter and academic recommendation letters required</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+  <section id="timeline" class="timeline">
+    <div class="container">
+      <div class="section-header">
+        <h2>Application Timeline</h2>
+        <div class="underline"></div>
+      </div>
+      <div class="timeline-container">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3>Application Open</h3>
+            <p>March 24, 2025</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3  >Application Deadline</h3>
+            <p id="deadline-date" class="deadline-date" ></p>
+          </div>
+        </div>
+        
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3>Scholarship Award</h3>
+            <p>October 2025</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="details" class="details">
+  <div class="container">
+    <div class="section-header">
+      <h2>Scholarship Details</h2>
+      <div class="underline"></div>
+    </div>
+    <div class="accordion">
+
+      <div class="accordion-item">
+        <div class="accordion-header">
+          <h3>Application Procedure</h3>
+          <span class="accordion-icon">+</span>
+        </div>
+        <div class="accordion-content">
+          <p>Applicants must apply online via the DAAD scholarship portal. The application includes submitting academic and personal documents.</p>
+          <p>All documents must be uploaded before the deadline: <strong>August 31, 2024</strong>. Applications submitted after the deadline will not be considered.</p>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <div class="accordion-header">
+          <h3>Selection & Evaluation Criteria</h3>
+          <span class="accordion-icon">+</span>
+        </div>
+        <div class="accordion-content">
+          <p>Candidates are evaluated based on:</p>
+          <ul>
+            <li>Academic excellence and past performance</li>
+            <li>Well-structured and convincing study proposal</li>
+            <li>Strong motivation and clearly defined goals</li>
+            <li>Relevance of the chosen program to future career plans</li>
+          </ul>
+          <p>The selection takes place in <strong>January 2025</strong> and results are announced via the DAAD portal.</p>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <div class="accordion-header">
+          <h3>Amount and Benefits</h3>
+          <span class="accordion-icon">+</span>
+        </div>
+        <div class="accordion-content">
+          <p>The DAAD Master Scholarship covers:</p>
+          <ul>
+            <li>Monthly stipend (approx. €934 for graduates)</li>
+            <li>Travel allowance (for international travel)</li>
+            <li>Health, accident, and personal liability insurance</li>
+            <li>Optional: Rent subsidy and allowance for accompanying family members</li>
+          </ul>
+          <p>Funding begins in <strong>October 2025</strong>.</p>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <div class="accordion-header">
+          <h3>Academic Requirements and Commitment</h3>
+          <span class="accordion-icon">+</span>
+        </div>
+        <div class="accordion-content">
+          <p>Scholarship holders must:</p>
+          <ul>
+            <li>Be enrolled in a full-time Master's program in Germany</li>
+            <li>Submit regular progress reports to DAAD</li>
+            <li>Maintain satisfactory academic performance during the scholarship period</li>
+          </ul>
+          <p>Failure to meet academic requirements may result in withdrawal of funding.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+  
+  
+  <section id="application" class="application">
+  <div class="container">
+    <div class="section-header">
+      <h2>How to Apply</h2>
+      <div class="underline"></div>
+    </div>
+    <div class="application-steps">
+
+      <div class="step-item">
+        <div class="step-number">1</div>
+        <div class="step-content">
+          <h3>Choose a Master's Program</h3>
+          <p>Explore the available Master's programs at universities in Germany. Make sure the program aligns with your academic and career goals.</p>
+        </div>
+      </div>
+
+      <div class="step-item">
+        <div class="step-number">2</div>
+        <div class="step-content">
+          <h3>Submit Application Online</h3>
+          <p>Submit your complete admission application through the DAAD scholarship portal. You must upload all required documents.</p>
+        </div>
+      </div>
+
+      <div class="step-item">
+        <div class="step-number">3</div>
+        <div class="step-content">
+          <h3>Prepare Required Documents</h3>
+          <p>Ensure that you provide all necessary documents, including:</p>
+          <ul>
+            <li>Certified academic transcripts</li>
+            <li>Curriculum Vitae (CV)</li>
+            <li>Motivation letter</li>
+            <li>Proof of language proficiency (English or German)</li>
+            <li>Passport copy</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="step-item">
+        <div class="step-number">4</div>
+        <div class="step-content">
+          <h3>Automatic Scholarship Consideration</h3>
+          <p>Once you submit your application, all eligible applicants will automatically be considered for the DAAD Master Scholarship. No separate application is needed.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="cta-container">
+      <a href="https://www2.daad.de/deutschland/stipendium/datenbank/en/21148-scholarship-database/?status=&origin=&subjectGrps=&daad=&intention=&q=&page=1&detail=50026200" target="_blank" class="cta-button">
+        Start Application
+      </a>
+    </div>
+  </div>
+</section>
+
+   <div class="chat-button">
+  <a href="/userr"><button>Chat with Experts</button></a>
+</div>
+  
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-section about-us">
+        <h3>About Us</h3>
+        <p>
+          We help students achieve their dreams of studying in Europe through
+          comprehensive visa and education guidance.
+        </p>
+      </div>
+
+      <div class="footer-section quick-links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Scholarships</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section connect">
+        <h3>Connect</h3>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-section newsletter">
+        <h3>Newsletter</h3>
+        <form>
+          <input type="email" placeholder="Enter your email" />
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <hr />
+      <p>&copy; 2025 EStudyVisa. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <div id="loginPopup" style="
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(26, 26, 26, 0.8); /* --dark with opacity */
+  backdrop-filter: blur(4px); /* Blur effect */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  font-family: 'Segoe UI', sans-serif;
+">
+  <div style="
+    background: #fff; /* --white */
+    padding: 50px 40px;
+    border-radius: 16px;
+    text-align: center;
+    max-width: 450px;
+    width: 90%;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.4s ease-in-out;
+  ">
+    <h2 style="
+    margin-bottom: 16px;
+    color: #5D1049; /* --primary */
+    font-size: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+">
+    <i class="fas fa-lock" style="margin-right: 8px; font-size: 30px; color: #5D1049;"></i> 
+    Login Required
+</h2>
+
+    <p style="
+      margin-bottom: 30px;
+      color: #666; /* --gray-text */
+      font-size: 16px;
+    ">You must login to access this feature. Please click the button below to sign in.</p>
+
+    <button id="popupLoginBtn" style="
+      padding: 12px 30px;
+      background-color: #5D1049; /* --primary */
+      color: #fff; /* --white */
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    ">Login</button>
+  </div>
+</div>
+
+<!-- Optional Fade Animation -->
+<style>
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+</style>
+
+
+
+  <script src="/JavaScript/Scholorshipdaad.js"></script>
+  <script src="/JavaScript/auth.js"></script>
+</body>
+</html>

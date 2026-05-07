@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UGA Incoming Scholarship</title>
+  <link rel="stylesheet" href="/CSS/artsspaincholorship.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="icon" href="/Assests/pictures/site.png" type="image/x-icon" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="container">
+        <nav>
+            <div class="logo">
+              <a href="/home"><img src="/Assests/pictures/Study_e-visa-removebg-preview.png"
+                  alt="Logo" class="logo-img" /></a>
+            </div>
+            <ul class="menu">
+              <li><a href="/home" >Home</a></li>
+              <li><a href="/universityexplorer">University</a></li>
+              <li><a href="/scholarshipfinder" class="active">Scholarships</a></li>
+              <li><a href="/accommodationfinder">Accommodation</a></li>
+              <li>
+                <a href="/eligibilitychecker">Eligibility Checker</a>
+              </li>
+              <li><a href="/europasscv">Europass CV</a></li>
+              <li><a href="/visa">Visa Guide</a></li>
+              <li><a href="/testprepration">Test Prep</a></li>
+            </ul>
+            <button id="loginBtn" class="login-btn" style="display: block;">Login</button>
+            <button id="logoutBtn" class="login-btn" style="display: none;">logout</button>
+      
+          </nav>
+          <div class="header-content">
+            <h1 id="scholarship-title"></h1>
+            <p id="scholarship-subtitle" class="subtitle"></p>
+            <div class="deadline">
+              <span class="deadline-label">Application Deadline:</span>
+              <span id="deadline-date-timeline" class="deadline-date"></span>
+            </div>
+            <a href="" id="apply-now" class="cta-button">Apply Now</a>
+          </div>
+    </div>
+  </header>
+
+  <section class="overview">
+    <div class="container">
+      <div class="scholarship-card">
+  
+        <!-- Amount -->
+        <div class="card-item amount">
+          <div class="icon gold"><i class="fas fa-euro-sign"></i></div>
+          <h3 id="scholarship-amount"></h3>
+        </div>
+  
+        <!-- Travel -->
+        <div class="card-item travel">
+          <div class="icon gold"><i class="fas fa-plane-departure"></i></div>
+          <h3>Living</h3>
+          <p>International travel cost covered</p>
+        </div>
+  
+        <!-- Age -->
+        <div class="card-item age">
+          <div class="icon gold"><i class="fas fa-user"></i></div>
+          <h3>Health</h3>
+          <p>Health insurance coverage</p>
+        </div>
+  
+      </div>
+    </div>
+  </section>
+  
+
+  <section id="eligibility" class="eligibility">
+    <div class="container">
+      <div class="section-header">
+        <h2>Eligibility Criteria</h2>
+        <div class="underline"></div>
+      </div>
+      <div class="eligibility-content">
+        <ul class="eligibility-list">
+          <li>
+            <span class="check-icon">✓</span>
+            <div>
+              <h3>International Students</h3>
+              <p>International students applying for a Master's programs</p>
+            </div>
+          </li>
+          <li> 
+            <span class="check-icon">✓</span>
+            <div>
+              <h3>Academic excellence</h3>
+              <p> (GPA 3.5+/4.0)</p>
+            </div>
+          </li>
+          <li>
+            <span class="check-icon">✓</span>
+            <div>
+              <h3>Enrollement</h3>
+              <p>Application through Université Paris Cité (not directly by students)</p>
+            </div>
+          </li>
+          <li>
+            <span class="check-icon">✓</span>
+            <div>
+              <h3>Requirement</h3>
+              <p>Demonstrated financial need</p>
+            </div>
+          </li>
+          <li>
+            <span class="check-icon">✓</span>
+            <div>
+              <h3>Documents</h3>
+              <p>Master’s applicants under 27 years old</p>
+            </div>
+          </li>
+          
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="timeline" class="timeline">
+    <div class="container">
+      <div class="section-header">
+        <h2>Application Timeline</h2>
+        <div class="underline"></div>
+      </div>
+      <div class="timeline-container">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3>Application Open</h3>
+            <p>February, 2025</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3  >Application Deadline</h3>
+            <p id="deadline-date" class="deadline-date" ></p>
+          </div>
+        </div>
+        
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3>Scholarship Award</h3>
+            <p>December 2025</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="details" class="details">
+    <div class="container">
+      <div class="section-header">
+        <h2>Scholarship Details</h2>
+        <div class="underline"></div>
+      </div>
+      <div class="accordion">
+  
+        <div class="accordion-item">
+          <div class="accordion-header">
+            <h3>Application Procedure</h3>
+            <span class="accordion-icon">+</span>
+          </div>
+          <div class="accordion-content">
+            <p>To apply for the Eiffel Excellence Scholarship through Université Paris Cité:</p>
+            <ul>
+              <li>You must first apply and be selected by a French higher education institution such as Université Paris Cité.</li>
+              <li>The university submits your Eiffel scholarship application on your behalf to Campus France.</li>
+              <li>Direct applications by students to Campus France are not accepted.</li>
+            </ul>
+            <p>The application period typically opens in October, with internal university deadlines set earlier than the Campus France deadline.</p>
+          </div>
+        </div>
+  
+        <div class="accordion-item">
+          <div class="accordion-header">
+            <h3>Selection & Evaluation Criteria</h3>
+            <span class="accordion-icon">+</span>
+          </div>
+          <div class="accordion-content">
+            <p>Selection is based on:</p>
+            <ul>
+              <li>Academic excellence and quality of the candidate's educational background</li>
+              <li>Relevance of the chosen program to the applicant's academic and professional goals</li>
+              <li>Applicant’s motivation and potential for leadership</li>
+              <li>Nationality (priority given to candidates from countries underrepresented in French institutions)</li>
+            </ul>
+          </div>
+        </div>
+  
+        <div class="accordion-item">
+          <div class="accordion-header">
+            <h3>Amount and Benefits of the Scholarship</h3>
+            <span class="accordion-icon">+</span>
+          </div>
+          <div class="accordion-content">
+            <p>Recipients of the Eiffel Scholarship receive:</p>
+            <ul>
+              <li>€1,181/month for Master’s level</li>
+              <li>€1,800/month for PhD level</li>
+              <li>International round-trip airfare</li>
+              <li>National and international health insurance</li>
+              <li>Assistance with finding accommodation in France</li>
+            </ul>
+            <p>Note: Tuition fees are not covered by the Eiffel Program but may be waived by the host institution.</p>
+          </div>
+        </div>
+  
+        <div class="accordion-item">
+          <div class="accordion-header">
+            <h3>Course Attendance and Academic Standing</h3>
+            <span class="accordion-icon">+</span>
+          </div>
+          <div class="accordion-content">
+            <p>To maintain the scholarship:</p>
+            <ul>
+              <li>Students must stay enrolled full-time at Université Paris Cité</li>
+              <li>Maintain satisfactory academic performance each semester</li>
+              <li>Fulfill all conditions of their study program and comply with French visa regulations</li>
+            </ul>
+            <p>Non-compliance may result in withdrawal of scholarship benefits.</p>
+          </div>
+        </div>
+  
+      </div>
+    </div>
+  </section>
+  
+  
+  
+  
+  
+  <section id="application" class="application">
+    <div class="container">
+      <div class="section-header">
+        <h2>How to Apply</h2>
+        <div class="underline"></div>
+      </div>
+      <div class="application-steps">
+  
+        <div class="step-item">
+          <div class="step-number">1</div>
+          <div class="step-content">
+            <h3>Choose a Degree Program</h3>
+            <p>Select a Master’s or PhD program offered at Université Paris Cité. Ensure your academic background aligns with the program's entry requirements.</p>
+          </div>
+        </div>
+  
+        <div class="step-item">
+          <div class="step-number">2</div>
+          <div class="step-content">
+            <h3>Apply for Admission to Université Paris Cité</h3>
+            <p>Submit your application for the chosen program through Université Paris Cité’s online platform. Be aware that Eiffel applicants must be pre-selected by the university.</p>
+          </div>
+        </div>
+  
+        <div class="step-item">
+          <div class="step-number">3</div>
+          <div class="step-content">
+            <h3>Submit Eiffel Scholarship Documents</h3>
+            <p>Once pre-selected, prepare required documents (CV, transcripts, study plan, passport, etc.) and submit them to the university's international office. The university will submit your application to Campus France on your behalf.</p>
+          </div>
+        </div>
+  
+        <div class="step-item">
+          <div class="step-number">4</div>
+          <div class="step-content">
+            <h3>Follow Up and Await Results</h3>
+            <p>Ensure all deadlines set by Université Paris Cité are followed. The final decision is made by Campus France. Results are usually announced in the spring.</p>
+          </div>
+        </div>
+  
+      </div>
+  
+      <div class="cta-container">
+        <a href="https://univparis.moveonfr.com/locallogin/670f712efb75c8a5b209ea9e/eng" target="_blank" class="cta-button">
+          Learn More & Apply
+        </a>
+      </div>
+    </div>
+  </section>
+  
+   <div class="chat-button">
+  <a href="/userr"><button>Chat with Experts</button></a>
+</div>
+  
+  
+  
+  
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-section about-us">
+        <h3>About Us</h3>
+        <p>
+          We help students achieve their dreams of studying in Europe through
+          comprehensive visa and education guidance.
+        </p>
+      </div>
+
+      <div class="footer-section quick-links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Scholarships</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section connect">
+        <h3>Connect</h3>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-section newsletter">
+        <h3>Newsletter</h3>
+        <form>
+          <input type="email" placeholder="Enter your email" />
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <hr />
+      <p>&copy; 2025 EStudyVisa. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <div id="loginPopup" style="
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(26, 26, 26, 0.8); /* --dark with opacity */
+  backdrop-filter: blur(4px); /* Blur effect */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  font-family: 'Segoe UI', sans-serif;
+">
+  <div style="
+    background: #fff; /* --white */
+    padding: 50px 40px;
+    border-radius: 16px;
+    text-align: center;
+    max-width: 450px;
+    width: 90%;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.4s ease-in-out;
+  ">
+    <h2 style="
+    margin-bottom: 16px;
+    color: #5D1049; /* --primary */
+    font-size: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+">
+    <i class="fas fa-lock" style="margin-right: 8px; font-size: 30px; color: #5D1049;"></i> 
+    Login Required
+</h2>
+
+    <p style="
+      margin-bottom: 30px;
+      color: #666; /* --gray-text */
+      font-size: 16px;
+    ">You must login to access this feature. Please click the button below to sign in.</p>
+
+    <button id="popupLoginBtn" style="
+      padding: 12px 30px;
+      background-color: #5D1049; /* --primary */
+      color: #fff; /* --white */
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    ">Login</button>
+  </div>
+</div>
+
+<!-- Optional Fade Animation -->
+<style>
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+</style>
+
+
+
+  <script src="/JavaScript/Scholorshipeiffels.js"></script>
+  <script src="/JavaScript/auth.js"></script>
+</body>
+</html>

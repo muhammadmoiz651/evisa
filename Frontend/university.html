@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>University Explorer</title>
+  <link rel="stylesheet" href="/CSS/university.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" />
+  <link rel="icon" href="/Assests/pictures/site.png" type="image/x-icon" />
+  
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div class="logo">
+        <a href="/home"><img src="/Assests/pictures/Study_e-visa-removebg-preview.png"
+            alt="Logo" class="logo-img" /></a>
+      </div>
+      <ul class="menu" id="menu">
+        <li><a href="/home" >Home</a></li>
+        <li><a href="/universityexplorer" class="active">University</a></li>
+        <li><a href="/scholarshipfinder">Scholarships</a></li>
+        <li><a href="/accommodationfinder">Accommodation</a></li>
+        <li><a href="/eligibilitychecker">Eligibility Checker</a></li>
+        <li><a href="/europasscv">Europass CV</a></li>
+        <li><a href="/visa">Visa Guide</a></li>
+        <li><a href="/testprepration">Test Prep</a></li>
+      </ul>
+      <div class="nav-buttons" id="navButtons">
+      <button id="loginBtn" class="login-btn" style="display: block;">Sign in</button>
+      <button id="createBtn" class="login-btn" style="display: block;">Sign up</button>
+      <button id="logoutBtn" class="login-btn" style="display: none;">logout</button>
+      </div>
+      <button class="hamburger" id="hamburger">☰</button>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Explore Universities Across Europe</h1>
+    <p>Find the best fit for your studies and apply directly!</p>
+    <div class="search-container">
+        <i class="fas fa-search"></i>
+      <input  type="text"  id="searchInput" placeholder= " Search by University or Country..." />
+    </div>
+    
+  </section>
+
+  <section class="filters">
+    <select id="countryFilter">
+      <option value="">All Countries</option>
+      <option value="Germany">Germany</option>
+      <option value="France">France</option>
+      <option value="Spain">Spain</option>
+    </select>
+    <select id="degreeFilter">
+      <option value="">All Degrees</option>
+      <option value="Undergraduate">Undergraduate</option>
+      <option value="Masters">Master's</option>
+      <option value="PhD">PhD</option>
+    </select>
+    <select id="programFilter">
+      <option value="">All Programs</option>
+      <option value="STEM">STEM</option>
+      <option value="Business">Business</option>
+      <option value="Arts">Arts</option>
+    </select>
+    <button id="applyFilters">Apply Filters</button>
+    <button id="resetFilters">Reset</button>
+  </section>
+
+  <main class="university-grid" id="universityGrid">
+    <!-- Universities will be dynamically added here -->
+  </main>
+
+  <div class="pagination" id="pagination">
+    <!-- Pagination will be dynamically added here -->
+  </div>
+
+  <div class="cta-banner">
+    <h2>Can't find the right university?</h2>
+    <button>Request Guidance</button>
+  </div>
+
+  <div class="chat-button">
+  <a href="/userr"><button>Chat with Experts</button></a>
+</div>
+
+
+  <!-- footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-section about-us">
+        <h3>About Us</h3>
+        <p>
+          We help students achieve their dreams of studying in Europe through
+          comprehensive visa and education guidance.
+        </p>
+      </div>
+
+      <div class="footer-section quick-links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Scholarships</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section connect">
+        <h3>Connect</h3>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-section newsletter">
+        <h3>Newsletter</h3>
+        <form>
+          <input type="email" placeholder="Enter your email" />
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <hr />
+      <p>&copy; 2024 EduVisa. All rights reserved.</p>
+    </div>
+  </footer>
+
+
+  <script src="/JavaScript/university.js"></script>
+  <script src="/JavaScript/auth.js"></script>
+  
+</body>
+
+</html>

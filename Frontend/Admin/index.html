@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/svg+xml" href="/vite.svg">
+  <title>Admin Panel</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="/Assests/pictures/site.png" type="image/x-icon" />
+  <link rel="stylesheet" href="css/dashboard.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <h2>Admin Panel</h2>
+      </div>
+      <nav class="sidebar-nav">
+        <ul>
+          <li><a href="#" class="nav-link active" data-section="dashboard"><i class="fas fa-chart-line"></i>
+              Dashboard</a></li>
+          <li><a href="#" class="nav-link" data-section="users"><i class="fas fa-users"></i> Users</a></li>
+          <li><a href="#" class="nav-link" data-section="universities"><i class="fas fa-university"></i>
+              Universities</a></li>
+          <li><a href="#" class="nav-link" data-section="scholarships"><i class="fas fa-graduation-cap"></i>
+              Scholarships</a></li>
+          <li>
+            <a href="#" class="nav-link" data-section="accommodations">
+              <i class="fas fa-bed"></i> Accommodations
+            </a>
+          </li>
+          <li>
+            <a href="#" class="nav-link" data-section="visa">
+              <i class="fas fa-passport"></i> Visa Guide
+            </a>
+          </li>
+          <li>
+            <a href="#" class="nav-link" data-section="studyGuides">
+              <i class="fas fa-book-reader"></i> IELTS
+            </a>
+          </li>
+
+
+        </ul>
+      </nav>
+    </aside>
+
+    <main class="main-content">
+      <header class="main-header">
+        <div class="header-search">
+
+        </div>
+        <div class="header-profile">
+
+          <button class="btn light" id="logoutBtn">
+            <i class="fas fa-sign-out-alt"></i> Logout
+          </button>
+
+
+        </div>
+      </header>
+
+      <div class="content">
+        <!-- Dashboard Section -->
+        <section id="dashboard" class="active">
+          <h1>Dashboard</h1>
+          <div class="dashboard-cards">
+            <div class="card">
+              <div class="card-icon"><i class="fas fa-users"></i></div>
+              <div class="card-info">
+                <h3>Users</h3>
+                <p class="count" id="userCount">0</p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-icon"><i class="fas fa-university"></i></div>
+              <div class="card-info">
+                <h3>Universities</h3>
+                <p class="count" id="universityCount">27</p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-icon"><i class="fas fa-graduation-cap"></i></div>
+              <div class="card-info">
+                <h3>Scholarships</h3>
+                <p class="count" id="scholarshipCount">25</p>
+              </div>
+            </div>
+
+          </div>
+
+
+          <div class="applications-section">
+            <h2>Applications</h2>
+            <div class="data-table-container">
+              <table id="applicationsTable" class="data-table">
+                <thead>
+                  <tr>
+
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>University</th>
+                    <th>Program Type</th>
+                    <th>Applied At</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <!-- Application data will be loaded here -->
+                </tbody>
+              </table>
+            </div>
+          </div><br><br>
+
+
+          <div class="recent-activity">
+            <h2>Recent Activity</h2>
+            <div class="activity-list">
+              <p class="empty-state">No recent activity</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Users Section -->
+        <section id="users">
+          <div class="section-header">
+            <h1>Users</h1>
+            <div class="section-actions">
+              <button class="btn primary"><i class="fas fa-plus"></i> Add User</button>
+            </div>
+          </div>
+          <div class="data-table-container">
+            <div class="table-controls">
+              <div class="search-filter">
+                <input type="text" id="userSearch" placeholder="Search users...">
+              </div>
+            </div>
+            <table id="usersTable" class="data-table">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Name</th>
+                  <th>Email</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- User data will be loaded here -->
+              </tbody>
+            </table>
+            <div id="usersPagination" class="pagination">
+              <!-- Pagination will be added here -->
+            </div>
+          </div>
+        </section>
+
+        <!-- Scholarships Section -->
+        <section id="scholarships">
+          <div class="section-header">
+            <h1>Scholarships</h1>
+            <div class="section-actions">
+              <button id="addScholarshipBtn" class="btn primary"><i class="fas fa-plus"></i> Add Scholarship</button>
+            </div>
+          </div>
+          <div class="data-table-container">
+            <div class="table-controls">
+              <div class="search-filter">
+                <input type="text" id="scholarshipSearch" placeholder="Search scholarships...">
+              </div>
+            </div>
+            <table id="scholarshipsTable" class="data-table">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Title</th>
+                  <th>University</th>
+                  <th>Degrees</th>
+                  <th>Deadline</th>
+                  <th>Amount</th>
+                  <th>Type</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- Scholarship data will be loaded here -->
+              </tbody>
+            </table>
+            <div id="scholarshipsPagination" class="pagination">
+              <!-- Pagination will be added here -->
+            </div>
+          </div>
+
+
+        </section>
+
+
+        <!-- Universities Section -->
+        <section id="universities">
+  <div class="section-header">
+    <h1>Universities</h1>
+    <div class="section-actions">
+      <button id="addUniversityBtn" class="btn primary">
+        <i class="fas fa-plus"></i> Add University
+      </button>
+    </div>
+  </div>
+
+  <div class="data-table-container">
+    <!-- Search Filter Section -->
+    <div class="table-controls">
+      <div class="search-filter">
+        <input type="text" id="universitySearch" placeholder="Search universities...">
+      </div>
+    </div>
+
+    <!-- Universities Table -->
+    <table id="universitiesTable" class="data-table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Country</th>
+          <th>World Ranking</th>
+          <th>Top Programs</th>
+          <th>Application Deadlines</th>
+          <th>UG Apply Link</th>
+          <th>MS Apply Link</th>
+          <th>Guidance</th>
+          <th>Programs</th>
+          <th>Degree</th>
+          <th>Image</th>
+
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- University data will be loaded here -->
+      </tbody>
+    </table>
+
+    <!-- Pagination Section -->
+    <div id="universitiesPagination" class="pagination">
+      <!-- Pagination buttons will be added here -->
+    </div>
+  </div>
+
+  <!-- Add University Form Modal (you can extend this based on your detail fields if needed) -->
+  <div id="addUniversityModal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <h2>Add New University</h2>
+      <form id="addUniversityForm">
+        <label for="university_name">University Name</label>
+        <input type="text" id="university_name" name="university_name" required />
+
+        <label for="country_id">Country ID</label>
+        <input type="number" id="country_id" name="country_id" required />
+
+        <label for="programs">Programs</label>
+        <input type="text" id="programs" name="programs" required />
+
+        <label for="degree">Degree</label>
+        <input type="text" id="degree" name="degree" required />
+
+        <label for="image">Image URL</label>
+        <input type="text" id="image" name="image" required />
+
+        <label for="website">Website</label>
+        <input type="text" id="website" name="website" required />
+
+        <button type="submit" class="btn primary">Add University</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+
+        <!-- Accommodations Section -->
+        <section id="accommodations">
+          <div class="section-header">
+            <h1>Accommodations</h1>
+            <div class="section-actions">
+              <button id="addAccommodationBtn" class="btn primary"><i class="fas fa-plus"></i> Add
+                Accommodation</button>
+            </div>
+          </div>
+          <div class="data-table-container">
+            <div class="table-controls">
+              <div class="search-filter">
+                <input type="text" id="accommodationSearch" placeholder="Search accommodations...">
+              </div>
+            </div>
+            <table id="accommodationsTable" class="data-table">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Name</th>
+                  <th>Location</th>
+                  <th>City</th>
+                  <th>Price (Weekly)</th>
+                  <th>Price (Monthly)</th>
+                  <th>Available</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- Accommodation data will be loaded here -->
+              </tbody>
+            </table>
+            <div id="accommodationsPagination" class="pagination">
+              <!-- Pagination will be added here -->
+            </div>
+          </div>
+        </section>
+
+        <section id="studyGuides">
+          <div class="section-header">
+            <h1>IELTS Study Guides</h1>
+            <div class="section-actions">
+              <button id="addGuideBtn" class="btn primary">
+                <i class="fas fa-plus"></i> Add Guide
+              </button>
+            </div>
+          </div>
+
+          <div class="data-table-container">
+            <div class="table-controls">
+              <div class="search-filter">
+                <input type="text" id="guideSearch" placeholder="Search guides...">
+              </div>
+            </div>
+
+            <table id="guidesTable" class="data-table">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Title</th>
+                  <th>Description</th>
+                  <th>Icon</th>
+                  <th>PDF Link</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody><!-- dynamic --></tbody>
+            </table>
+
+            <div id="guidesPagination" class="pagination"><!-- dynamic --></div>
+          </div>
+        </section>
+
+
+        <!-- Visa Resources Section -->
+        <section id="visa" class="admin-section">
+
+          <!-- REQUIRED DOCUMENTS -->
+          <div class="sub-section" id="required-docs">
+            <div class="section-header">
+              <h1>Required Documents</h1>
+              <button onclick="showAddDocForm()" class="btn primary"><i class="fas fa-plus"></i> Add Document</button>
+            </div>
+            <div class="data-table-container">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>ID</th>
+                    <th>Category</th>
+                    <th>Item</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody id="docsTableBody"></tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- VISA APPOINTMENTS -->
+          <div class="sub-section" id="visa-appts">
+            <div class="section-header">
+              <h1 style="margin-top: 40px;">Visa Appointments</h1>
+              <button onclick="showAddApptForm()" class="btn primary"><i class="fas fa-plus"></i> Add
+                Appointment</button>
+            </div>
+            <div class="data-table-container">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>ID</th>
+                    <th>Country</th>
+                    <th>Link</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody id="apptTableBody"></tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- VIDEO TUTORIALS -->
+          <div class="sub-section" id="video-tuts">
+            <div class="section-header">
+              <h1 style="margin-top: 40px;">Video Tutorials</h1>
+              <button onclick="showAddVideoForm()" class="btn primary"><i class="fas fa-plus"></i> Add Video</button>
+            </div>
+            <div class="data-table-container">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>ID</th>
+                    <th>Title</th>
+                    <th>YouTube ID</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody id="videoTableBody"></tbody>
+              </table>
+            </div>
+          </div>
+
+        </section>
+
+      </div>
+    </main>
+  </div>
+
+  <!-- Modal for forms -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 id="modalTitle">Add New Item</h2>
+        <span class="close-modal">&times;</span>
+      </div>
+      <div class="modal-body">
+        <!-- Form content will be loaded dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <div id="modalForm"
+    style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5);">
+    <div
+      style="background:#fff; padding:20px; max-width:400px; margin:100px auto; border-radius:8px; position:relative;">
+      <h3 id="modalTitle"></h3>
+      <form id="modalInnerForm">
+        <!-- dynamic inputs inserted here -->
+      </form>
+      <div style="margin-top:10px; text-align:right;">
+        <button id="modalCancelBtn" type="button">Cancel</button>
+
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+  <script src="js/utils.js"></script>
+  <script src="js/dataStore.js"></script>
+  <script src="js/dashboard.js"></script>
+  <script src="js/users.js"></script>
+  <script src="js/scholarships.js"></script>
+  <script src="js/universities.js"></script>
+  <script src="js/accommodations.js"></script>
+  <script src="js/studyguides.js"></script>
+  <script src="js/visaresource.js"></script>
+  <script src="js/main.js"></script>
+  <script src="/JavaScript/auth.js"></script>
+</body>
+
+</html>

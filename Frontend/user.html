@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Chat</title>
+    <link rel="stylesheet" href="/CSS/chatstyle.css">
+    <link rel="stylesheet" href="/CSS/chat-styles.css">
+    <link rel="icon" href="/Assests/pictures/site.png" type="image/x-icon" />
+  </head>
+  <body>
+    <div class="chat-container">
+      <div class="chat-header">
+        <button style="border: none;" class="back-button" onclick="history.back()">
+
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M19 12H5M12 19l-7-7 7-7"/>
+          </svg>
+        </button>
+       <div class="chat-info">
+  <div class="profile-pic advisor">
+    <span>🎓</span>
+  </div>
+  <div class="chat-details">
+    <h2>Study Abroad Advisors – Germany | France | Spain</h2>
+    
+  </div>
+</div>
+
+        <div class="header-actions">
+          
+        </div>
+      </div>
+
+      <div class="chat-messages" id="chat-messages">
+        <!-- Messages will be added dynamically -->
+      </div>
+
+      <div class="chat-input">
+        <div class="input-container">
+         
+          <input type="text" id="user-message" placeholder="Type a message..." />
+          <button id="send-button" class="send-button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="22" y1="2" x2="11" y2="13"></line>
+              <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+            </svg>
+          </button>
+        </div>
+      </div>
+      
+    </div>
+
+    <script type="module" src="/JavaScript/userChat.js"></script>
+    <script type="module" src="/JavaScript/auth.js"></script>
+  </body>
+</html>

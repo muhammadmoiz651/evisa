@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Scholarship Finder</title>
+  <link rel="stylesheet" href="/CSS/Scholorship.css" />
+  <link rel="stylesheet" href="/chatbot/chatbot.css" />
+  <link rel="stylesheet" href="/chatbot/styley.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <link rel="icon" href="/Assests/pictures/site.png" type="image/x-icon" />
+   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Navigation Bar -->
+  <header>
+    <nav>
+      <div class="logo">
+        <a href="/home"><img src="/Assests/pictures/Study_e-visa-removebg-preview.png"
+            alt="Logo" class="logo-img" /></a>
+      </div>
+      <ul class="menu" id="menu">
+        <li><a href="/home" >Home</a></li>
+        <li><a href="/universityexplorer">University</a></li>
+        <li><a href="/scholarshipfinder" class="active">Scholarships</a></li>
+        <li><a href="/accommodationfinder">Accommodation</a></li>
+        <li><a href="/eligibilitychecker">Eligibility Checker</a></li>
+        <li><a href="/europasscv">Europass CV</a></li>
+        <li><a href="/visa">Visa Guide</a></li>
+        <li><a href="/testprepration">Test Prep</a></li>
+      </ul>
+      <div class="nav-buttons" id="navButtons">
+      <button id="loginBtn" class="login-btn" style="display: block;">Sign in</button>
+      <button id="createBtn" class="login-btn" style="display: block;">Sign up</button>
+      <button id="logoutBtn" class="login-btn" style="display: none;">logout</button>
+      </div>
+      <button class="hamburger" id="hamburger">☰</button>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Find Scholarships that Match Your Profile</h1>
+    <p>Unlock funding for your studies across Europe!</p>
+    <div class="search-container">
+      <i class="fas fa-search"></i>
+      <input type="text" id="searchInput" placeholder="Search by Scholarship Name, Country, or University..." />  
+    </div>
+  </section>
+
+  <!-- Filter Section -->
+  <section class="filters">
+    <div class="filter-container">
+      <select id="countryFilter">
+        <option value="">Select Country</option>
+        <option value="germany">Germany</option>
+        <option value="france">France</option>
+        <option value="spain">Spain</option>
+      </select>
+      <select id="universityFilter">
+        <option value="">Select University</option>
+        <option value="oxford">University of Oxford</option>
+        <option value="technical">Technical University of Munich</option>
+        <option value="sorbonne">Sorbonne University</option>
+        <option value="cambridge">University of Cambridge</option>
+        <option value="eth">'ETH Zurich</option>
+        <option value="sciences">Sciences Po</option>
+      </select>
+      <select id="degreeFilter">
+        <option value="">Select Degree Level</option>
+        <option value="bachelor">Bachelors</option>
+        <option value="master">Masters</option>
+        <option value="phd">PhD</option>
+      </select>
+      <select id="typeFilter">
+        <option value="">Scholarship Type</option>
+        <option value="merit">Merit-Based</option>
+        <option value="need">Need-Based</option>
+        <option value="research">Research Grants</option>
+      </select>
+      <button id="applyFilters" class="filter-button">Apply Filters</button>
+      <button id="resetFilters" class="reset-button">Reset</button>
+    </div>
+  </section>
+
+  <!-- Scholarship Listings -->
+  <section class="scholarships">
+    <div id="scholarshipGrid" class="scholarship-grid">
+      <!-- Scholarship cards will be inserted here by JavaScript -->
+    </div>
+    <!-- Pagination -->
+    <div class="pagination">
+      <button id="prevPage" class="page-button">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+      <div id="pageNumbers" class="page-numbers"></div>
+      <button id="nextPage" class="page-button">
+        <i class="fas fa-chevron-right"></i>
+      </button>
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <section class="cta-banner">
+  <h2>Need Help Finding the Right Scholarship?</h2>
+  <button id="request-guidance-btn" class="guidance-button">Request Guidance</button>
+</section>
+
+<div id="chatbot">
+    <!-- Chat Icon Button -->
+    
+  
+    <!-- Chatbot Container (Initially Hidden) -->
+    <div id="chatbot-container" class="hidden">
+      <div class="chatbot-header">
+        <div class="chatbot-title">
+          <span class="material-symbols-rounded">school</span>
+          <h2>University Admissions Assistant</h2>
+        </div>
+        <button id="close-chat" aria-label="Close chat">
+          <span class="material-symbols-rounded">close</span>
+        </button>
+      </div>
+  
+      <div class="chat-messages" id="chat-messages">
+  <div class="message bot">
+    <div class="message-content">
+      <p>Hello! I'm your University Admissions Assistant. I specialize in helping you find scholarships and admissions guidance, especially for Germany. I also cover information for France and Spain.</p>
+      <ul>
+        <li><strong>Germany</strong> - Extensive scholarship and admission support</li>
+        <li><strong>France</strong></li>
+        <li><strong>Spain</strong></li>
+      </ul>
+      <p>What would you like to know about scholarships or admissions?</p>
+    </div>
+  </div>
+</div>
+
+  
+      <div class="chat-input-area">
+        <input 
+          type="text" 
+          id="user-input" 
+          placeholder="Ask about admissions or scholarships..."
+          aria-label="Type your message"
+        >
+        <button id="send-message" aria-label="Send message">
+          <span class="material-symbols-rounded">send</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-section about-us">
+        <h3>About Us</h3>
+        <p>
+          We help students achieve their dreams of studying in Europe through
+          comprehensive visa and education guidance.
+        </p>
+      </div>
+
+      <div class="footer-section quick-links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Scholarships</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section connect">
+        <h3>Connect</h3>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-section newsletter">
+        <h3>Newsletter</h3>
+        <form>
+          <input type="email" placeholder="Enter your email" />
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <hr />
+      <p>&copy; 2024 EduVisa. All rights reserved.</p>
+    </div>
+  </footer>
+
+    
+
+  <script src="/JavaScript/Scholorship.js"></script>
+  <script src="/JavaScript/auth.js"></script>
+   <script src="/chatbot/main.js"></script>
+  <script src="/chatbot/chatbot.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{name}}</title>
+  <link rel="stylesheet" href="/CSS/accommodation2.css">
+  <link rel="icon" href="/Assests/pictures/site.png" type="image/x-icon" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div class="logo">
+        <a href="/home"><img src="/Assests/pictures/Study_e-visa-removebg-preview.png" alt="Logo"
+            class="logo-img" /></a>
+      </div>
+      <ul class="menu">
+        <li><a href="/home">Home</a></li>
+        <li><a href="/universityexplorer">University</a></li>
+        <li><a href="/scholarshipfinder">Scholarships</a></li>
+        <li><a href="/accommodationfinder" class="active">Accommodation</a></li>
+        <li>
+          <a href="/eligibilitychecker">Eligibility Checker</a>
+        </li>
+        <li><a href="/europasscv">Europass CV</a></li>
+        <li><a href="/visa">Visa Guide</a></li>
+        <li><a href="/testprepration">Test Prep</a></li>
+      </ul>
+      <button id="loginBtn" class="login-btn" style="display: block;">Login</button>
+      <button id="logoutBtn" class="login-btn" style="display: none;">logout</button>
+
+    </nav>
+  </header>
+
+
+
+  <main>
+    <section class="hero">
+      <div class="image-gallery">
+        <div class="main-image">
+          <img src="{{image}}" alt="Accommodation Image" />
+        </div>
+        <div class="thumbnail-row">
+          <img
+            src="https://images.pexels.com/photos/271624/pexels-photo-271624.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            class="thumbnail" alt="Accommodation interior">
+          <img
+            src="https://images.pexels.com/photos/1457842/pexels-photo-1457842.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            class="thumbnail" alt="Accommodation exterior">
+          <img
+            src="https://images.pexels.com/photos/271743/pexels-photo-271743.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            class="thumbnail" alt="Accommodation bedroom">
+          <img
+            src="https://images.pexels.com/photos/3319432/pexels-photo-3319432.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            class="thumbnail" alt="Accommodation common area">
+        </div>
+      </div>
+    </section>
+
+    <section class="accommodation-details">
+      <div class="details-container">
+        <div class="details-header">
+          <div>
+            <h1 class="accommodation-name">{{name}}</h1>
+            <p class="accommodation-location"><i class="fas fa-map-marker-alt"></i> {{location}}</p>
+          </div>
+          <div class="rating">
+            <span class="rating-number">{{rating}}</span>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+            <span class="reviews">123 reviews</span>
+          </div>
+        </div>
+
+        <div class="details-grid">
+          <div class="details-left">
+            <div class="detail-card">
+              <h2>Accommodation Details</h2>
+              <div class="detail-item">
+                <div class="detail-icon"><i class="fas fa-building"></i></div>
+                <div class="detail-content">
+                  <h3>Type</h3>
+                  <p>{{type}}</p>
+                </div>
+              </div>
+              <div class="detail-item">
+                <div class="detail-icon"><i class="fas fa-euro-sign"></i></div>
+                <div class="detail-content">
+                  <span class="price accommodation-prices">{{price_monthly}}</span>
+              <span class="period">per month</span>
+                </div>
+              </div>
+              <div class="detail-item">
+                <div class="detail-icon"><i class="fas fa-city"></i></div>
+                <div class="detail-content">
+                  <h3>City</h3>
+                  <p class="accommodation-city">{{city}}</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="detail-card">
+              <h2>Amenities</h2>
+              <div class="amenities-grid">
+                <div class="amenity-item">
+                  <i class="fas fa-wifi"></i>
+                  <span>Free WiFi</span>
+                </div>
+                <div class="amenity-item">
+                  <i class="fas fa-utensils"></i>
+                  <span>Kitchen</span>
+                </div>
+                <div class="amenity-item">
+                  <i class="fas fa-dumbbell"></i>
+                  <span>Fitness Center</span>
+                </div>
+                <div class="amenity-item">
+                  <i class="fas fa-couch"></i>
+                  <span>Common Area</span>
+                </div>
+                <div class="amenity-item">
+                  <i class="fas fa-desktop"></i>
+                  <span>Study Room</span>
+                </div>
+                <div class="amenity-item">
+                  <i class="fas fa-tshirt"></i>
+                  <span>Laundry</span>
+                </div>
+                <div class="amenity-item">
+                  <i class="fas fa-lock"></i>
+                  <span>Security</span>
+                </div>
+                <div class="amenity-item">
+                  <i class="fas fa-bath"></i>
+                  <span>Private Bath</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="detail-card">
+              <h2>Description</h2>
+              <p>The {{name}} offers international students an exceptional living. This dormitory provides a perfect blend of academic focus and cultural immersion.</p>
+              <p>Each room is thoughtfully designed to meet student needs with essential amenities and comfortable
+                living spaces. The community atmosphere fosters connections with students from around the world,
+                creating an enriching environment for academic and personal growth.</p>
+            </div>
+          </div>
+
+          <div class="details-right">
+            <div class="booking-card">
+              <div class="price-range">
+                <span class="price accommodation-price">{{price_monthly}}</span>
+                <span class="period">per month</span>
+              </div>
+              <form class="booking-form">
+                <div class="form-group">
+                  <label for="move-in-date">Move-in Date</label>
+                  <input type="date" id="move-in-date" name="move-in-date">
+                </div>
+                <div class="form-group">
+                  <label for="stay-duration">Duration of Stay</label>
+                  <select id="stay-duration" name="stay-duration">
+                    <option value="1">1 Semester</option>
+                    <option value="2">2 Semesters</option>
+                    <option value="3">Full Academic Year</option>
+                    <option value="4">Summer Term</option>
+                  </select>
+                </div>
+                <a href="{{bookingUrl}}"><button class="btn btn-book">Book Now</button></a>
+              </form>
+              <div class="contact-info">
+                <p><i class="fas fa-phone"></i> +33 1 23 45 67 89</p>
+                <p><i class="fas fa-envelope"></i> info@citeuniversitaire.fr</p>
+              </div>
+            </div>
+
+            <div class="map-card">
+              <h2>Location</h2>
+              <div class="map-container">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2626.2990673391547!2d2.3382813156744447!3d48.81923937928496!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e671a1a98f4b47%3A0x1c4282bc491c8410!2sCit%C3%A9%20Internationale%20Universitaire%20de%20Paris!5e0!3m2!1sen!2sfr!4v1645488562374!5m2!1sen!2sfr"
+                  width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
+                </iframe>
+              </div>
+              <p class="address"><i class="fas fa-map-marker-alt"></i> {{location}}</p>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-section about-us">
+        <h3>About Us</h3>
+        <p>
+          We help students achieve their dreams of studying in Europe through
+          comprehensive visa and education guidance.
+        </p>
+      </div>
+
+      <div class="footer-section quick-links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Scholarships</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section connect">
+        <h3>Connect</h3>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-section newsletter">
+        <h3>Newsletter</h3>
+        <form>
+          <input type="email" placeholder="Enter your email" />
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <hr />
+      <p>&copy; 2025 EStudyVisa. All rights reserved.</p>
+    </div>
+  </footer>
+
+ 
+
+  
+  <script src="/JavaScript/auth.js"></script>
+</body>
+
+</html>

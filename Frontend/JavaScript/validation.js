@@ -1,0 +1,115 @@
+/**
+ * Validate if the student is eligible for university admission based on marks
+ * @param {number} marks - The obtained marks
+ * @returns {boolean} - Whether the student is eligible
+ */
+export function validateEligibility(marks) {
+  // Check if marks are valid and greater than 700 for eligibility
+  return !isNaN(marks) && marks > 700;
+}
+
+/**
+ * Validate if the board name is from a recognized education board
+ * @param {string} boardName - The detected board name
+ * @returns {boolean} - Whether the board is recognized
+ */
+export function validateBoardName(boardName) {
+  if (!boardName) return false;
+  
+  // List of recognized education boards in Pakistan
+  const recognizedBoards = [
+    'IELTS',
+    'BOARD OF INTERMEDIATE AND SECONDARY EDUCATION GUJRANWALA',
+    'GUJRANWALA BOARD',
+    'GUJRANWALA',
+    'FEDERAL BOARD OF INTERMEDIATE AND SECONDARY EDUCATION',
+    'FEDERAL BOARD',
+    'FBISE',
+    'BOARD OF INTERMEDIATE AND SECONDARY EDUCATION GUJRANWALA NY',
+    'BISE GUJRANWALA',
+    'BOARD OF INTERMEDIATE AND SECONDARY EDUCATION GUJRANWALA',
+    'PUNJAB BOARD',
+    'LAHORE BOARD',
+    'BOARD OF INTERMEDIATE AND SECONDARY EDUCATION LAHORE',
+    'BISE LAHORE',
+    'GUJRANWALA BOARD',
+    'BOARD OF INTERMEDIATE AND SECONDARY EDUCATION GUJRANWALA',
+    'BISE GUJRANWALA',
+    'RAWALPINDI BOARD',
+    'BOARD OF INTERMEDIATE AND SECONDARY EDUCATION RAWALPINDI',
+    'BISE RAWALPINDI',
+    'FAISALABAD BOARD',
+    'BOARD OF INTERMEDIATE AND SECONDARY EDUCATION FAISALABAD',
+    'BISE FAISALABAD',
+    'MULTAN BOARD',
+    'BOARD OF INTERMEDIATE AND SECONDARY EDUCATION MULTAN',
+    'BISE MULTAN',
+    'SARGODHA BOARD',
+    'BOARD OF INTERMEDIATE AND SECONDARY EDUCATION SARGODHA',
+    'BISE SARGODHA',
+    'BAHAWALPUR BOARD',
+    'BOARD OF INTERMEDIATE AND SECONDARY EDUCATION BAHAWALPUR',
+    'BISE BAHAWALPUR',
+    'SAHIWAL BOARD',
+    'BOARD OF INTERMEDIATE AND SECONDARY EDUCATION SAHIWAL',
+    'BISE SAHIWAL',
+    'DG KHAN BOARD',
+    'BOARD OF INTERMEDIATE AND SECONDARY EDUCATION DG KHAN',
+    'BISE DG KHAN',
+    'SINDH BOARD',
+    'KARACHI BOARD',
+    'BOARD OF INTERMEDIATE AND SECONDARY EDUCATION KARACHI',
+    'BISE KARACHI',
+    'HYDERABAD BOARD',
+    'BOARD OF INTERMEDIATE AND SECONDARY EDUCATION HYDERABAD',
+    'BISE HYDERABAD',
+    'SUKKUR BOARD',
+    'BOARD OF INTERMEDIATE AND SECONDARY EDUCATION SUKKUR',
+    'BISE SUKKUR',
+    'LARKANA BOARD',
+    'BOARD OF INTERMEDIATE AND SECONDARY EDUCATION LARKANA',
+    'BISE LARKANA',
+    'MIRPURKHAS BOARD',
+    'BOARD OF INTERMEDIATE AND SECONDARY EDUCATION MIRPURKHAS',
+    'BISE MIRPURKHAS',
+    'KPK BOARD',
+    'PESHAWAR BOARD',
+    'BOARD OF INTERMEDIATE AND SECONDARY EDUCATION PESHAWAR',
+    'BISE PESHAWAR',
+    'MARDAN BOARD',
+    'BOARD OF INTERMEDIATE AND SECONDARY EDUCATION MARDAN',
+    'BISE MARDAN',
+    'SWAT BOARD',
+    'BOARD OF INTERMEDIATE AND SECONDARY EDUCATION SWAT',
+    'BISE SWAT',
+    'MALAKAND BOARD',
+    'BOARD OF INTERMEDIATE AND SECONDARY EDUCATION MALAKAND',
+    'BISE MALAKAND',
+    'ABBOTTABAD BOARD',
+    'BOARD OF INTERMEDIATE AND SECONDARY EDUCATION ABBOTTABAD',
+    'BISE ABBOTTABAD',
+    'KOHAT BOARD',
+    'BOARD OF INTERMEDIATE AND SECONDARY EDUCATION KOHAT',
+    'BISE KOHAT',
+    'BALOCHISTAN BOARD',
+    'QUETTA BOARD',
+    'BOARD OF INTERMEDIATE AND SECONDARY EDUCATION QUETTA',
+    'BISE QUETTA',
+    'AJK BOARD',
+    'MIRPUR BOARD',
+    'BOARD OF INTERMEDIATE AND SECONDARY EDUCATION MIRPUR',
+    'BISE MIRPUR',
+    'MUZAFFARABAD BOARD',
+    'BOARD OF INTERMEDIATE AND SECONDARY EDUCATION MUZAFFARABAD',
+    'BISE MUZAFFARABAD',
+    'GILGIT BALTISTAN BOARD',
+    'AGHA KHAN BOARD'
+  ];
+  
+  // Convert board name to uppercase for case-insensitive comparison
+  const upperBoardName = boardName.toUpperCase();
+  
+  // Check if any recognized board name is a substring of the detected board name
+  // This handles partial matches and variations in board name formatting
+  return recognizedBoards.some(board => upperBoardName.includes(board));
+}

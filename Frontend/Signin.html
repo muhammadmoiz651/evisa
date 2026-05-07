@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign In</title>
+  <link rel="stylesheet" href="/CSS/Signin.css" />
+  <link rel="icon" href="/Assests/pictures/site.png" type="image/x-icon" />
+</head>
+
+<body>
+  <div class="container">
+    <div class="login-card">
+      <div class="login-left">
+        <h2>Sign in</h2>
+        <a class="google-btn" href="/auth/google">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg" alt="Google logo"
+            class="google-icon">
+          <span>Login with Google</span>
+        </a>
+        <p class="divider">or use your account</p>
+        <form id="loginForm">
+          <input type="email" placeholder="Email" id="email" required />
+          <input type="password" id="password" name="password" placeholder="Password" required
+            oninput="validateLoginPassword()" onfocus="showRules()" onblur="hideRules()">
+
+          <div id="login-password-rules-container" style="display: none;">
+            <ul id="login-password-rules">
+              <li id="login-length" class="invalid">At least 8 characters</li>
+              <li id="login-uppercase" class="invalid">At least one uppercase letter</li>
+              <li id="login-number" class="invalid">At least one number</li>
+              <li id="login-special" class="invalid">At least one special character (@, #, $...)</li>
+            </ul>
+          </div>
+          <a href="/forget" class="forgot-password">Forgot your password?</a>
+          <button type="submit" class="sign-in-btn">SIGN IN</button>
+
+        </form>
+      </div>
+      <div class="login-right">
+        <h1>Hello, Friend!</h1>
+        <p>Enter your personal details and start journey with us</p>
+        <a href="/registration"><button class="sign-up-btn">SIGN UP</button></a>
+      </div>
+    </div>
+  </div>
+  <script src="/JavaScript/Signin.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</body>
+
+</html>

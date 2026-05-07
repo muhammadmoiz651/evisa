@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>University Admissions Assistant</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./chatbot.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body>
+  <div id="app">
+    <button id="chat-toggle" class="chat-icon" aria-label="Open chat assistant">
+      <span class="material-symbols-rounded"></span>
+    </button>
+
+    <div id="chatbot">
+    <div id="chatbot-container" class="hidden" >
+      <div class="chatbot-header">
+        <div class="chatbot-title">
+          <span class="material-symbols-rounded">school</span>
+          <h2>University Admissions Assistant</h2>
+        </div>
+        <button id="close-chat" aria-label="Close chat">
+          <span class="material-symbols-rounded">close</span>
+        </button>
+      </div>
+      
+      <div class="chat-messages" id="chat-messages">
+        <div class="message bot">
+          <div class="message-content">
+            <p>Hello! I'm your University Admissions Assistant. I can help with information about university admissions and scholarships in:</p>
+            <ul>
+              <li><strong>France</strong></li>
+              <li><strong>Spain</strong></li>
+              <li><strong>Germany</strong></li>
+            </ul>
+            <p>What would you like to know about?</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="chat-input-area">
+        <input 
+          type="text" 
+          id="user-input" 
+          placeholder="Ask about admissions or scholarships..."
+          aria-label="Type your message"
+        >
+        <button id="send-message" aria-label="Send message">
+          <span class="material-symbols-rounded">send</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+  
+  <script src="./chatbot.js"></script>
+  <script src="./main.js"></script>
+</body>
+</html>

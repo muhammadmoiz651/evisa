@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Signup</title>
+  <link rel="stylesheet" href="/CSS/Registration.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+  <link rel="icon" href="/Assests/pictures/site.png" type="image/x-icon" />
+
+
+</head>
+
+<body>
+  <!-- Success message -->
+  <div id="successMessage" class="success-banner" style="display: none">
+    Signup successful! Please check your email to verify your account.
+    <button class="dismiss-btn" onclick="dismissMessage()">×</button>
+  </div>
+
+  <div id="app">
+    <div class="container">
+      <!-- Left Panel -->
+      <div class="left-panel">
+        <h1>Welcome Back!</h1>
+        <p>To keep connected with us please login with your personal info</p>
+        <a href="/signin"><button class="sign-in-btn">SIGN IN</button></a>
+      </div>
+
+      <!-- Right Panel -->
+      <div class="right-panel">
+        <h1>Create Account</h1>
+
+        <a class="google-btn" href="/auth/google">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg" alt="Google logo"
+            class="google-icon">
+          <span>Signup with Google</span>
+        </a>
+
+        <div class="divider"><span>or</span></div>
+
+        <!-- Signup Form -->
+        <form id="signupForm">
+          <input type="text" id="name" name="name" required placeholder="Your Name">
+          <input type="email" id="email" name="email" required placeholder="Your Email">
+
+          <input type="password" id="password" name="password" required placeholder="Your Password"
+            oninput="checkPassword()" onfocus="showPasswordRules()" onblur="hidePasswordRules()">
+
+          <div id="password-rules-container" style="display: none;">
+            <ul id="password-rules">
+              <li id="length" class="invalid">At least 8 characters</li>
+              <li id="uppercase" class="invalid">At least one uppercase letter</li>
+              <li id="number" class="invalid">At least one number</li>
+              <li id="special" class="invalid">At least one special character (@, #, $, etc.)</li>
+            </ul>
+          </div>
+
+          <div id="error-msg" class="error" style="color: red; margin-top: 10px;"></div>
+
+          <button type="submit" class="sign-up-btn">Sign Up</button>
+        </form>
+
+      </div>
+    </div>
+  </div>
+
+
+  <script src="/JavaScript/Registration.js"></script>
+
+</body>
+
+</html>

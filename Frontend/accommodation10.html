@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The FIZZ München</title>
+  <link rel="stylesheet" href="/CSS/accommodation2.css">
+  <link rel="icon" href="/Assests/pictures/site.png" type="image/x-icon" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div class="logo">
+        <a href="/home"><img src="/Assests/pictures/Study_e-visa-removebg-preview.png" alt="Logo"
+            class="logo-img" /></a>
+      </div>
+      <ul class="menu">
+        <li><a href="/home">Home</a></li>
+        <li><a href="/universityexplorer">University</a></li>
+        <li><a href="/scholarshipfinder">Scholarships</a></li>
+        <li><a href="/accommodationfinder" class="active">Accommodation</a></li>
+        <li>
+          <a href="/eligibilitychecker">Eligibility Checker</a>
+        </li>
+        <li><a href="/europasscv">Europass CV</a></li>
+        <li><a href="/visa">Visa Guide</a></li>
+        <li><a href="/testprepration">Test Prep</a></li>
+      </ul>
+      <button id="loginBtn" class="login-btn" style="display: block;">Login</button>
+      <button id="logoutBtn" class="login-btn" style="display: none;">logout</button>
+
+    </nav>
+  </header>
+
+
+
+  <main>
+    <section class="hero">
+      <div class="image-gallery">
+        <div class="main-image">
+          <img src="" alt="Accommodation Image" />
+        </div>
+        <div class="thumbnail-row">
+          <img src="/Assests/pictures/fizz.jpg" class="thumbnail" alt="Accommodation interior">
+          <img src="/Assests/pictures/fizz2.jpg" class="thumbnail" alt="Accommodation exterior">
+          <img src="/Assests/pictures/fizz3.jpg" class="thumbnail" alt="Accommodation bedroom">
+          <img src="/Assests/pictures/fizz4.jpg" class="thumbnail" alt="Accommodation common area">
+        </div>
+      </div>
+    </section>
+
+    <section class="accommodation-details">
+      <div class="details-container">
+        <div class="details-header">
+          <div>
+            <h1 class="accommodation-name"></h1>
+            <p class="accommodation-location"><i class="fas fa-map-marker-alt"></i> </p>
+          </div>
+          <div class="rating">
+            <span class="rating-number">4.5</span>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+            <span class="reviews">123 reviews</span>
+          </div>
+        </div>
+
+        <div class="details-grid">
+          <div class="details-left">
+            <div class="detail-card">
+              <h2>Accommodation Details</h2>
+              <div class="detail-item">
+                <div class="detail-icon"><i class="fas fa-building"></i></div>
+                <div class="detail-content">
+                  <h3>Type</h3>
+                  <p>Dormitory</p>
+                </div>
+              </div>
+              <div class="detail-item">
+                <div class="detail-icon"><i class="fas fa-euro-sign"></i></div>
+                <div class="detail-content">
+                  <span class="price accommodation-prices"></span>
+                  <span class="period">per month</span>
+                </div>
+              </div>
+              <div class="detail-item">
+                <div class="detail-icon"><i class="fas fa-city"></i></div>
+                <div class="detail-content">
+                  <h3>City</h3>
+                  <p class="accommodation-city"></p>
+                </div>
+              </div>
+            </div>
+
+            <div class="detail-card">
+              <h2>Amenities</h2>
+              <div class="amenities-grid">
+                <div class="amenity-item">
+                  <i class="fas fa-bed"></i>
+                  <span>Furnished Room (120 x 200 cm Bed)</span>
+                </div>
+                <div class="amenity-item">
+                  <i class="fas fa-expand-arrows-alt"></i>
+                  <span>16–17 m² Private Space</span>
+                </div>
+                <div class="amenity-item">
+                  <i class="fas fa-utensils"></i>
+                  <span>Private Kitchen</span>
+                </div>
+                <div class="amenity-item">
+                  <i class="fas fa-shower"></i>
+                  <span>Private Bathroom</span>
+                </div>
+                <div class="amenity-item">
+                  <i class="fas fa-wifi"></i>
+                  <span>High-Speed Internet</span>
+                </div>
+                <div class="amenity-item">
+                  <i class="fas fa-concierge-bell"></i>
+                  <span>All-Inclusive Rent</span>
+                </div>
+              </div>
+            </div>
+
+
+
+            <div class="detail-card">
+              <h2>Description</h2>
+              <p>
+                The FIZZ München is a modern and student-friendly accommodation located in the heart of Munich. It
+                offers fully furnished private apartments designed for comfort, convenience, and community living —
+                perfect for international students, interns, and young professionals.
+              </p>
+              <p>
+                Each apartment includes a private bathroom, kitchenette, comfortable bed, workspace, and high-speed
+                internet. The building features extensive shared facilities such as study rooms, community kitchens,
+                lounges, a rooftop terrace, laundry rooms, and bike storage — creating an environment that supports both
+                academic focus and social interaction.
+              </p>
+              <p>
+                Situated close to public transport, universities, supermarkets, and recreational areas, The FIZZ
+                provides easy access to everything Munich has to offer. With flexible booking types, all-in rent
+                pricing, and vibrant community events, it’s more than just a place to live — it’s a lifestyle designed
+                for success and connection.
+              </p>
+            </div>
+
+
+
+
+
+
+          </div>
+
+          <div class="details-right">
+            <div class="booking-card">
+              <div class="price-range">
+                <span class="price accommodation-price"></span>
+                <span class="period">per month</span>
+              </div>
+              <form class="booking-form">
+                <div class="form-group">
+                  <label for="move-in-date">Move-in Date</label>
+                  <input type="date" id="move-in-date" name="move-in-date">
+                </div>
+                <div class="form-group">
+                  <label for="stay-duration">Duration of Stay</label>
+                  <select id="stay-duration" name="stay-duration">
+
+                    <option value="1">Full Year Stay</option>
+                    <option value="2">Semester Stay</option>
+                    <option value="3">Long Term Stay</option>
+                  </select>
+                </div>
+                <button class="btn btn-book">Book Now</button>
+              </form>
+              <div class="contact-info">
+                <p><i class="fas fa-phone"></i> <a href="tel:+49 30 403 670 920">+49 30 403 670 920</a></p>
+
+              </div>
+
+            </div>
+
+            <div class="map-card">
+              <h2>Location</h2>
+              <div class="map-container">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2661.318981522037!2d11.568147276669845!3d48.15187894663552!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479ddf78e5c6c6b1%3A0x3d3dfd149b30ff5f!2sStudentenwerk%20M%C3%BCnchen%20-%20Wohnanlage%20Brienner%20Stra%C3%9Fe!5e0!3m2!1sen!2sde!4v1715610771443!5m2!1sen!2sd"
+                  width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
+                </iframe>
+              </div>
+              <p class="address">
+                <i class="fas fa-map-marker-alt"></i> <span class="accommodation-locationsss"></span>
+              </p>
+
+              <div class="nearby">
+                <h3>Nearby</h3>
+                <ul>
+                  <li>
+                    <i class="fas fa-graduation-cap"></i>
+                    <span class="accommodation-locationss">Technical University of Munich (TUM) – 3.0 km</span>
+                  </li>
+                  <li>
+                    <i class="fas fa-subway"></i>
+                    Westendstraße U-Bahn Station – 0.4 km
+                  </li>
+                  <li>
+                    <i class="fas fa-store"></i>
+                    REWE Supermarket – 0.3 km
+                  </li>
+                  <li>
+                    <i class="fas fa-utensils"></i>
+                    Local Cafés & Restaurants – 0.2 km
+                  </li>
+                  <li>
+                    <i class="fas fa-university"></i>
+                    Hochschule München University of Applied Sciences – 2.5 km
+                  </li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+        </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-section about-us">
+        <h3>About Us</h3>
+        <p>
+          We help students achieve their dreams of studying in Europe through
+          comprehensive visa and education guidance.
+        </p>
+      </div>
+
+      <div class="footer-section quick-links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Scholarships</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section connect">
+        <h3>Connect</h3>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-section newsletter">
+        <h3>Newsletter</h3>
+        <form>
+          <input type="email" placeholder="Enter your email" />
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <hr />
+      <p>&copy; 2025 EStudyVisa. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <div id="loginPopup" style="
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(26, 26, 26, 0.8); /* --dark with opacity */
+  backdrop-filter: blur(4px); /* Blur effect */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  font-family: 'Segoe UI', sans-serif;
+">
+    <div style="
+    background: #fff; /* --white */
+    padding: 50px 40px;
+    border-radius: 16px;
+    text-align: center;
+    max-width: 450px;
+    width: 90%;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.4s ease-in-out;
+  ">
+      <h2 style="
+    margin-bottom: 16px;
+    color: #5D1049; /* --primary */
+    font-size: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+">
+        <i class="fas fa-lock" style="margin-right: 8px; font-size: 30px; color: #5D1049;"></i>
+        Login Required
+      </h2>
+
+      <p style="
+      margin-bottom: 30px;
+      color: #666; /* --gray-text */
+      font-size: 16px;
+    ">You must login to access this feature. Please click the button below to sign in.</p>
+
+      <button id="popupLoginBtn" style="
+      padding: 12px 30px;
+      background-color: #5D1049; /* --primary */
+      color: #fff; /* --white */
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    ">Login</button>
+    </div>
+  </div>
+
+  <!-- Optional Fade Animation -->
+  <style>
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: scale(0.9);
+      }
+
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+  </style>
+
+  <script src="/JavaScript/accommodation10.js"></script>
+  <script src="/JavaScript/auth.js"></script>
+</body>
+
+</html>
