@@ -115,7 +115,7 @@ passport.use(
     {
       clientID: process.env.GOOGLE_CLIENT_ID,
       clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-      callbackURL: `${process.env.BASE_URL}/auth/google/callback`,
+      callbackURL: "/auth/google/callback",
       passReqToCallback: true,
     },
     (req, token, tokenSecret, profile, done) => {
@@ -163,11 +163,15 @@ app.use(passport.session());
 // Import JSON Web Token library
 const jwt = require("jsonwebtoken");
 
-// Route to start Google OAuth authentication
-app.get(
-  "/auth/google",
-  passport.authenticate("google", { scope: ["profile", "email"] })
-);
+// Route to start Google OAuth authentication (dynamic callback URL)
+app.get("/auth/google", (req, res, next) => {
+  const host = req.get("host");
+  const protocol = req.protocol;
+  passport.authenticate("google", {
+    scope: ["profile", "email"],
+    callbackURL: `${protocol}://${host}/auth/google/callback`
+  })(req, res, next);
+});
 
 // Callback route after Google authentication
 app.get(
