@@ -18,7 +18,7 @@ function scrollToresources() {
 // Fetch and render Study Guides from backend
 function renderStudyGuides() {
   const container = document.getElementById("guidesContainer");
-  fetch("http://localhost:3000/api/study-guides")
+  fetch(`${window.location.origin}/api/study-guides`)
     .then((res) => res.json())
     .then((guides) => {
       guides.forEach((guide) => {

@@ -126,7 +126,7 @@ form.addEventListener("submit", async (e) => {
   const formData = new FormData(form);
 
   try {
-    const response = await fetch("http://localhost:3000/submit", {
+    const response = await fetch(`${window.location.origin}/submit`, {
       method: "POST",
       body: formData,
     });
@@ -163,7 +163,7 @@ function addTestimonial(t) {
   const html = `
     <div class="testimonial">
       <div class="student-image">
-        <img src="http://localhost:3000${t.imageUrl || ''}" alt="Student" />
+        <img src="${window.location.origin}${t.imageUrl || ''}" alt="Student" />
       </div>
       <p class="quote">"${t.quote}"</p>
       <div class="rating">${stars}</div>
@@ -174,6 +174,6 @@ function addTestimonial(t) {
 
 
 // Load all testimonials on start
-fetch("http://localhost:3000/testimonials")
+fetch(`${window.location.origin}/testimonials`)
   .then(res => res.json())
   .then(data => data.forEach(addTestimonial));

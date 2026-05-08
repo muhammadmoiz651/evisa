@@ -64,7 +64,7 @@ hamburger.addEventListener('click', () => {
 
 
 /* ========= CONFIG ========= */
-const API_BASE = "http://localhost:3000";           // backend origin
+const API_BASE = window.location.origin;
 const DOCS_ENDPOINT   = `${API_BASE}/api/required-documents`;
 const APPTS_ENDPOINT  = `${API_BASE}/api/visa-appointments`;
 const VIDEOS_ENDPOINT = `${API_BASE}/api/video-tutorials`;

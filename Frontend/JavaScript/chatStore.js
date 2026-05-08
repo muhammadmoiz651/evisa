@@ -2,7 +2,7 @@
 
 export class ChatStore {
   constructor () {
-    this.apiUrl  = 'http://localhost:3000/chat';
+    this.apiUrl  = `${window.location.origin}/chat`;
     this.messages = [];
   }
 

@@ -101,7 +101,7 @@ hamburger.addEventListener('click', () => {
   async function saveData(data) {
     try {
         console.log('Saving data:', data);
-        const response = await fetch('http://localhost:3000/cv-data', {
+        const response = await fetch(`${window.location.origin}/cv-data`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

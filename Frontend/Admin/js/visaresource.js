@@ -1,4 +1,4 @@
-const API = "http://localhost:3000";  // backend base URL
+const API = window.location.origin;
 
 // Modal elements
 const modal = document.getElementById("modalForm");

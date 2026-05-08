@@ -193,7 +193,7 @@ function filterScholarships() {
 // Fetch scholarships from API
 async function fetchScholarships() {
   try {
-    const response = await fetch("http://localhost:3000/scholarshipsapi"); // Full URL
+    const response = await fetch(`${window.location.origin}/scholarshipsapi`);
     if (!response.ok) {
       throw new Error(`HTTP error! Status: ${response.status}`);
     }

@@ -17,7 +17,7 @@ let filteredUniversities = [];
 // Fetch universities data from backend
 async function fetchUniversities() {
   try {
-    const response = await fetch('http://localhost:3000/universitiesapi');
+    const response = await fetch(`${window.location.origin}/universitiesapi`);
     if (!response.ok) {
       throw new Error(`HTTP error! Status: ${response.status}`);
     }

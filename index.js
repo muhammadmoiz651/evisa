@@ -1952,13 +1952,13 @@ app.post('/api/apply', async (req, res) => {
     return res.status(400).json({ message: "Missing fields" });
   }
 
-  const query = `
+  const sql = `
     INSERT INTO applications (name, email, university_name, program_type, applied_at)
     VALUES (?, ?, ?, ?, NOW())
   `;
 
   try {
-    await db.query(query, [name, email, university_name, program_type]);
+    await query(sql, [name, email, university_name, program_type]);
     res.json({ message: "Application submitted successfully!" });
   } catch (error) {
     console.error("Database insert error:", error);

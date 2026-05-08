@@ -136,7 +136,7 @@ if (advisorPages.includes(currentPath)) {
 
   if (logoutBtn) {
     logoutBtn.addEventListener('click', function () {
-      fetch("http://localhost:3000/logout", {
+      fetch(`${window.location.origin}/logout`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

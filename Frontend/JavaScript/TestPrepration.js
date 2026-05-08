@@ -48,7 +48,7 @@ function addTestimonial(t) {
   const html = `
     <div class="testimonial">
       <div class="student-image">
-        <img src="http://localhost:3000/${t.image}" alt="Student" />
+        <img src="${window.location.origin}/${t.image}" alt="Student" />
       </div>
       <p class="quote">"${t.quote}"</p>
       <div class="rating">${stars}</div>
@@ -58,7 +58,7 @@ function addTestimonial(t) {
 }
 
 // Fetch testimonials from backend and add them, then start scrolling
-fetch("http://localhost:3000/testimonials")
+fetch(`${window.location.origin}/testimonials`)
   .then(res => res.json())
   .then(data => {
     data.forEach(addTestimonial);
@@ -104,7 +104,7 @@ form.addEventListener("submit", async (e) => {
   e.preventDefault();
   const formData = new FormData(form);
 
-  const response = await fetch("http://localhost:3000/submit", {
+  const response = await fetch(`${window.location.origin}/submit`, {
     method: "POST",
     body: formData,
   });
@@ -113,7 +113,7 @@ form.addEventListener("submit", async (e) => {
 
   // Duplicate testimonials again for infinite scroll effect
   container.innerHTML = ''; // Clear all
-  fetch("http://localhost:3000/testimonials")
+  fetch(`${window.location.origin}/testimonials`)
     .then(res => res.json())
     .then(data => {
       data.forEach(addTestimonial);
